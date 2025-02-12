@@ -100,7 +100,7 @@
       },
       "required": false,
       "type": {
-        "name": "{Partial<MuiDialogProps>}"
+        "name": "Partial<MuiDialogProps>"
       }
     }
   },
@@ -206,7 +206,7 @@
     },
     "disabled": {
       "defaultValue": null,
-      "description": "Disable picker and text field\nIf `true`, the `input` element will be disabled.",
+      "description": "Disable picker and text field",
       "name": "disabled",
       "parent": {
         "fileName": "material-ui-pickers/lib/src/typings/BasePicker.tsx",
@@ -422,318 +422,6 @@
         "name": "Partial<PopoverProps>"
       }
     },
-    "label": {
-      "defaultValue": null,
-      "description": "The label content.",
-      "name": "label",
-      "parent": {
-        "fileName": "material-ui-pickers/node_modules/@material-ui/core/TextField/TextField.d.ts",
-        "name": "BaseTextFieldProps"
-      },
-      "required": false,
-      "type": {
-        "name": "ReactNode"
-      }
-    },
-    "select": {
-      "defaultValue": null,
-      "description": "Render a [`Select`](/api/select/) element while passing the Input element to `Select` as `input` parameter.\nIf this option is set you must pass the options of the select as children.",
-      "name": "select",
-      "parent": {
-        "fileName": "material-ui-pickers/node_modules/@material-ui/core/TextField/TextField.d.ts",
-        "name": "BaseTextFieldProps"
-      },
-      "required": false,
-      "type": {
-        "name": "boolean"
-      }
-    },
-    "children": {
-      "defaultValue": null,
-      "description": "The contents of the form control.\n@ignore",
-      "name": "children",
-      "parent": {
-        "fileName": "material-ui-pickers/node_modules/@material-ui/core/TextField/TextField.d.ts",
-        "name": "BaseTextFieldProps"
-      },
-      "required": false,
-      "type": {
-        "name": "ReactNode"
-      }
-    },
-    "color": {
-      "defaultValue": null,
-      "description": "The color of the component. It supports those theme colors that make sense for this component.",
-      "name": "color",
-      "parent": {
-        "fileName": "material-ui-pickers/node_modules/@material-ui/core/TextField/TextField.d.ts",
-        "name": "BaseTextFieldProps"
-      },
-      "required": false,
-      "type": {
-        "name": "\"primary\" | \"secondary\""
-      }
-    },
-    "error": {
-      "defaultValue": null,
-      "description": "If `true`, the label will be displayed in an error state.",
-      "name": "error",
-      "parent": {
-        "fileName": "material-ui-pickers/node_modules/@material-ui/core/TextField/TextField.d.ts",
-        "name": "BaseTextFieldProps"
-      },
-      "required": false,
-      "type": {
-        "name": "boolean"
-      }
-    },
-    "fullWidth": {
-      "defaultValue": null,
-      "description": "If `true`, the input will take up the full width of its container.",
-      "name": "fullWidth",
-      "parent": {
-        "fileName": "material-ui-pickers/node_modules/@material-ui/core/TextField/TextField.d.ts",
-        "name": "BaseTextFieldProps"
-      },
-      "required": false,
-      "type": {
-        "name": "boolean"
-      }
-    },
-    "margin": {
-      "defaultValue": null,
-      "description": "If `dense` or `normal`, will adjust vertical spacing of this and contained components.",
-      "name": "margin",
-      "parent": {
-        "fileName": "material-ui-pickers/node_modules/@material-ui/core/TextField/TextField.d.ts",
-        "name": "BaseTextFieldProps"
-      },
-      "required": false,
-      "type": {
-        "name": "\"none\" | \"dense\" | \"normal\""
-      }
-    },
-    "required": {
-      "defaultValue": null,
-      "description": "If `true`, the label is displayed as required and the `input` element will be required.",
-      "name": "required",
-      "parent": {
-        "fileName": "material-ui-pickers/node_modules/@material-ui/core/TextField/TextField.d.ts",
-        "name": "BaseTextFieldProps"
-      },
-      "required": false,
-      "type": {
-        "name": "boolean"
-      }
-    },
-    "size": {
-      "defaultValue": null,
-      "description": "The size of the text field.",
-      "name": "size",
-      "parent": {
-        "fileName": "material-ui-pickers/node_modules/@material-ui/core/TextField/TextField.d.ts",
-        "name": "BaseTextFieldProps"
-      },
-      "required": false,
-      "type": {
-        "name": "\"small\" | \"medium\""
-      }
-    },
-    "defaultValue": {
-      "defaultValue": null,
-      "description": "The default value of the `input` element.",
-      "name": "defaultValue",
-      "parent": {
-        "fileName": "material-ui-pickers/node_modules/@material-ui/core/TextField/TextField.d.ts",
-        "name": "BaseTextFieldProps"
-      },
-      "required": false,
-      "type": {
-        "name": "unknown"
-      }
-    },
-    "id": {
-      "defaultValue": null,
-      "description": "The id of the `input` element.\nUse this prop to make `label` and `helperText` accessible for screen readers.",
-      "name": "id",
-      "parent": {
-        "fileName": "material-ui-pickers/node_modules/@material-ui/core/TextField/TextField.d.ts",
-        "name": "BaseTextFieldProps"
-      },
-      "required": false,
-      "type": {
-        "name": "string"
-      }
-    },
-    "placeholder": {
-      "defaultValue": null,
-      "description": "The short hint displayed in the input before the user enters a value.",
-      "name": "placeholder",
-      "parent": {
-        "fileName": "material-ui-pickers/node_modules/@material-ui/core/TextField/TextField.d.ts",
-        "name": "BaseTextFieldProps"
-      },
-      "required": false,
-      "type": {
-        "name": "string"
-      }
-    },
-    "autoComplete": {
-      "defaultValue": null,
-      "description": "This prop helps users to fill forms faster, especially on mobile devices.\nThe name can be confusing, as it's more like an autofill.\nYou can learn more about it [following the specification](https://html.spec.whatwg.org/multipage/form-control-infrastructure.html#autofill).",
-      "name": "autoComplete",
-      "parent": {
-        "fileName": "material-ui-pickers/node_modules/@material-ui/core/TextField/TextField.d.ts",
-        "name": "BaseTextFieldProps"
-      },
-      "required": false,
-      "type": {
-        "name": "string"
-      }
-    },
-    "autoFocus": {
-      "defaultValue": null,
-      "description": "If `true`, the `input` element will be focused during the first mount.",
-      "name": "autoFocus",
-      "parent": {
-        "fileName": "material-ui-pickers/node_modules/@material-ui/core/TextField/TextField.d.ts",
-        "name": "BaseTextFieldProps"
-      },
-      "required": false,
-      "type": {
-        "name": "boolean"
-      }
-    },
-    "FormHelperTextProps": {
-      "defaultValue": null,
-      "description": "Props applied to the [`FormHelperText`](/api/form-helper-text/) element.",
-      "name": "FormHelperTextProps",
-      "parent": {
-        "fileName": "material-ui-pickers/node_modules/@material-ui/core/TextField/TextField.d.ts",
-        "name": "BaseTextFieldProps"
-      },
-      "required": false,
-      "type": {
-        "name": "Partial<OverrideProps<FormHelperTextTypeMap<{}, \"p\">, \"p\">>"
-      }
-    },
-    "helperText": {
-      "defaultValue": null,
-      "description": "The helper text content.",
-      "name": "helperText",
-      "parent": {
-        "fileName": "material-ui-pickers/node_modules/@material-ui/core/TextField/TextField.d.ts",
-        "name": "BaseTextFieldProps"
-      },
-      "required": false,
-      "type": {
-        "name": "ReactNode"
-      }
-    },
-    "InputLabelProps": {
-      "defaultValue": null,
-      "description": "Props applied to the [`InputLabel`](/api/input-label/) element.",
-      "name": "InputLabelProps",
-      "parent": {
-        "fileName": "material-ui-pickers/node_modules/@material-ui/core/TextField/TextField.d.ts",
-        "name": "BaseTextFieldProps"
-      },
-      "required": false,
-      "type": {
-        "name": "Partial<InputLabelProps>"
-      }
-    },
-    "inputRef": {
-      "defaultValue": null,
-      "description": "Pass a ref to the `input` element.",
-      "name": "inputRef",
-      "parent": {
-        "fileName": "material-ui-pickers/node_modules/@material-ui/core/TextField/TextField.d.ts",
-        "name": "BaseTextFieldProps"
-      },
-      "required": false,
-      "type": {
-        "name": "(instance: any) => void"
-      }
-    },
-    "multiline": {
-      "defaultValue": null,
-      "description": "If `true`, a textarea element will be rendered instead of an input.",
-      "name": "multiline",
-      "parent": {
-        "fileName": "material-ui-pickers/node_modules/@material-ui/core/TextField/TextField.d.ts",
-        "name": "BaseTextFieldProps"
-      },
-      "required": false,
-      "type": {
-        "name": "boolean"
-      }
-    },
-    "name": {
-      "defaultValue": null,
-      "description": "Name attribute of the `input` element.",
-      "name": "name",
-      "parent": {
-        "fileName": "material-ui-pickers/node_modules/@material-ui/core/TextField/TextField.d.ts",
-        "name": "BaseTextFieldProps"
-      },
-      "required": false,
-      "type": {
-        "name": "string"
-      }
-    },
-    "rows": {
-      "defaultValue": null,
-      "description": "Number of rows to display when multiline option is set to true.",
-      "name": "rows",
-      "parent": {
-        "fileName": "material-ui-pickers/node_modules/@material-ui/core/TextField/TextField.d.ts",
-        "name": "BaseTextFieldProps"
-      },
-      "required": false,
-      "type": {
-        "name": "string | number"
-      }
-    },
-    "rowsMax": {
-      "defaultValue": null,
-      "description": "Maximum number of rows to display when multiline option is set to true.",
-      "name": "rowsMax",
-      "parent": {
-        "fileName": "material-ui-pickers/node_modules/@material-ui/core/TextField/TextField.d.ts",
-        "name": "BaseTextFieldProps"
-      },
-      "required": false,
-      "type": {
-        "name": "string | number"
-      }
-    },
-    "SelectProps": {
-      "defaultValue": null,
-      "description": "Props applied to the [`Select`](/api/select/) element.",
-      "name": "SelectProps",
-      "parent": {
-        "fileName": "material-ui-pickers/node_modules/@material-ui/core/TextField/TextField.d.ts",
-        "name": "BaseTextFieldProps"
-      },
-      "required": false,
-      "type": {
-        "name": "Partial<SelectProps>"
-      }
-    },
-    "type": {
-      "defaultValue": null,
-      "description": "Type of the `input` element. It should be [a valid HTML5 input type](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input#Form_%3Cinput%3E_types).",
-      "name": "type",
-      "parent": {
-        "fileName": "material-ui-pickers/node_modules/@material-ui/core/TextField/TextField.d.ts",
-        "name": "BaseTextFieldProps"
-      },
-      "required": false,
-      "type": {
-        "name": "string"
-      }
-    },
     "inputVariant": {
       "defaultValue": null,
       "description": "Pass material-ui text field variant down, bypass internal variant prop",
@@ -744,7 +432,7 @@
       },
       "required": false,
       "type": {
-        "name": "\"filled\" | \"standard\" | \"outlined\""
+        "name": "\"standard\" | \"outlined\" | \"filled\""
       }
     },
     "TextFieldComponent": {
@@ -770,7 +458,7 @@
       },
       "required": false,
       "type": {
-        "name": "{Array<\"year\" | \"date\" | \"month\">}"
+        "name": "Array<\"year\" | \"date\" | \"month\">"
       }
     },
     "openTo": {
@@ -783,7 +471,7 @@
       },
       "required": false,
       "type": {
-        "name": "\"year\" | \"date\" | \"month\""
+        "name": "\"date\" | \"year\" | \"month\""
       }
     },
     "minDate": {
@@ -953,7 +641,7 @@
       },
       "required": false,
       "type": {
-        "name": "{Partial<IconButtonProps>}"
+        "name": "Partial<IconButtonProps>"
       }
     },
     "rightArrowButtonProps": {
@@ -966,7 +654,7 @@
       },
       "required": false,
       "type": {
-        "name": "{Partial<IconButtonProps>}"
+        "name": "Partial<IconButtonProps>"
       }
     },
     "shouldDisableDate": {
@@ -1120,6 +808,21 @@
         "name": "string"
       }
     },
+    "variant": {
+      "defaultValue": {
+        "value": "'dialog'"
+      },
+      "description": "Picker container option",
+      "name": "variant",
+      "parent": {
+        "fileName": "material-ui-pickers/lib/src/typings/BasePicker.tsx",
+        "name": "BasePickerProps"
+      },
+      "required": false,
+      "type": {
+        "name": "\"dialog\" | \"inline\" | \"static\""
+      }
+    },
     "onError": {
       "defaultValue": null,
       "description": "Callback fired when new error should be displayed\n(!! This is a side effect. Be careful if you want to rerender the component)",
@@ -1148,7 +851,7 @@
     },
     "disabled": {
       "defaultValue": null,
-      "description": "Disable picker and text field\nIf `true`, the `input` element will be disabled.",
+      "description": "Disable picker and text field",
       "name": "disabled",
       "parent": {
         "fileName": "material-ui-pickers/lib/src/typings/BasePicker.tsx",
@@ -1325,32 +1028,6 @@
         "name": "Partial<PopoverProps>"
       }
     },
-    "label": {
-      "defaultValue": null,
-      "description": "The label content.",
-      "name": "label",
-      "parent": {
-        "fileName": "material-ui-pickers/node_modules/@material-ui/core/TextField/TextField.d.ts",
-        "name": "BaseTextFieldProps"
-      },
-      "required": false,
-      "type": {
-        "name": "ReactNode"
-      }
-    },
-    "select": {
-      "defaultValue": null,
-      "description": "Render a [`Select`](/api/select/) element while passing the Input element to `Select` as `input` parameter.\nIf this option is set you must pass the options of the select as children.",
-      "name": "select",
-      "parent": {
-        "fileName": "material-ui-pickers/node_modules/@material-ui/core/TextField/TextField.d.ts",
-        "name": "BaseTextFieldProps"
-      },
-      "required": false,
-      "type": {
-        "name": "boolean"
-      }
-    },
     "mask": {
       "defaultValue": null,
       "description": "Custom mask. Can be used to override generate from format. (e.g. __/__/____ __:__)",
@@ -1358,279 +1035,6 @@
       "parent": {
         "fileName": "material-ui-pickers/lib/src/_shared/KeyboardDateInput.tsx",
         "name": "KeyboardDateInputProps"
-      },
-      "required": false,
-      "type": {
-        "name": "string"
-      }
-    },
-    "color": {
-      "defaultValue": null,
-      "description": "The color of the component. It supports those theme colors that make sense for this component.",
-      "name": "color",
-      "parent": {
-        "fileName": "material-ui-pickers/node_modules/@material-ui/core/TextField/TextField.d.ts",
-        "name": "BaseTextFieldProps"
-      },
-      "required": false,
-      "type": {
-        "name": "\"primary\" | \"secondary\""
-      }
-    },
-    "error": {
-      "defaultValue": null,
-      "description": "If `true`, the label will be displayed in an error state.",
-      "name": "error",
-      "parent": {
-        "fileName": "material-ui-pickers/node_modules/@material-ui/core/TextField/TextField.d.ts",
-        "name": "BaseTextFieldProps"
-      },
-      "required": false,
-      "type": {
-        "name": "boolean"
-      }
-    },
-    "fullWidth": {
-      "defaultValue": null,
-      "description": "If `true`, the input will take up the full width of its container.",
-      "name": "fullWidth",
-      "parent": {
-        "fileName": "material-ui-pickers/node_modules/@material-ui/core/TextField/TextField.d.ts",
-        "name": "BaseTextFieldProps"
-      },
-      "required": false,
-      "type": {
-        "name": "boolean"
-      }
-    },
-    "margin": {
-      "defaultValue": null,
-      "description": "If `dense` or `normal`, will adjust vertical spacing of this and contained components.",
-      "name": "margin",
-      "parent": {
-        "fileName": "material-ui-pickers/node_modules/@material-ui/core/TextField/TextField.d.ts",
-        "name": "BaseTextFieldProps"
-      },
-      "required": false,
-      "type": {
-        "name": "\"none\" | \"dense\" | \"normal\""
-      }
-    },
-    "required": {
-      "defaultValue": null,
-      "description": "If `true`, the label is displayed as required and the `input` element will be required.",
-      "name": "required",
-      "parent": {
-        "fileName": "material-ui-pickers/node_modules/@material-ui/core/TextField/TextField.d.ts",
-        "name": "BaseTextFieldProps"
-      },
-      "required": false,
-      "type": {
-        "name": "boolean"
-      }
-    },
-    "size": {
-      "defaultValue": null,
-      "description": "The size of the text field.",
-      "name": "size",
-      "parent": {
-        "fileName": "material-ui-pickers/node_modules/@material-ui/core/TextField/TextField.d.ts",
-        "name": "BaseTextFieldProps"
-      },
-      "required": false,
-      "type": {
-        "name": "\"small\" | \"medium\""
-      }
-    },
-    "defaultValue": {
-      "defaultValue": null,
-      "description": "The default value of the `input` element.",
-      "name": "defaultValue",
-      "parent": {
-        "fileName": "material-ui-pickers/node_modules/@material-ui/core/TextField/TextField.d.ts",
-        "name": "BaseTextFieldProps"
-      },
-      "required": false,
-      "type": {
-        "name": "unknown"
-      }
-    },
-    "id": {
-      "defaultValue": null,
-      "description": "The id of the `input` element.\nUse this prop to make `label` and `helperText` accessible for screen readers.",
-      "name": "id",
-      "parent": {
-        "fileName": "material-ui-pickers/node_modules/@material-ui/core/TextField/TextField.d.ts",
-        "name": "BaseTextFieldProps"
-      },
-      "required": false,
-      "type": {
-        "name": "string"
-      }
-    },
-    "placeholder": {
-      "defaultValue": null,
-      "description": "The short hint displayed in the input before the user enters a value.",
-      "name": "placeholder",
-      "parent": {
-        "fileName": "material-ui-pickers/node_modules/@material-ui/core/TextField/TextField.d.ts",
-        "name": "BaseTextFieldProps"
-      },
-      "required": false,
-      "type": {
-        "name": "string"
-      }
-    },
-    "autoComplete": {
-      "defaultValue": null,
-      "description": "This prop helps users to fill forms faster, especially on mobile devices.\nThe name can be confusing, as it's more like an autofill.\nYou can learn more about it [following the specification](https://html.spec.whatwg.org/multipage/form-control-infrastructure.html#autofill).",
-      "name": "autoComplete",
-      "parent": {
-        "fileName": "material-ui-pickers/node_modules/@material-ui/core/TextField/TextField.d.ts",
-        "name": "BaseTextFieldProps"
-      },
-      "required": false,
-      "type": {
-        "name": "string"
-      }
-    },
-    "autoFocus": {
-      "defaultValue": null,
-      "description": "If `true`, the `input` element will be focused during the first mount.",
-      "name": "autoFocus",
-      "parent": {
-        "fileName": "material-ui-pickers/node_modules/@material-ui/core/TextField/TextField.d.ts",
-        "name": "BaseTextFieldProps"
-      },
-      "required": false,
-      "type": {
-        "name": "boolean"
-      }
-    },
-    "FormHelperTextProps": {
-      "defaultValue": null,
-      "description": "Props applied to the [`FormHelperText`](/api/form-helper-text/) element.",
-      "name": "FormHelperTextProps",
-      "parent": {
-        "fileName": "material-ui-pickers/node_modules/@material-ui/core/TextField/TextField.d.ts",
-        "name": "BaseTextFieldProps"
-      },
-      "required": false,
-      "type": {
-        "name": "Partial<OverrideProps<FormHelperTextTypeMap<{}, \"p\">, \"p\">>"
-      }
-    },
-    "helperText": {
-      "defaultValue": null,
-      "description": "The helper text content.",
-      "name": "helperText",
-      "parent": {
-        "fileName": "material-ui-pickers/node_modules/@material-ui/core/TextField/TextField.d.ts",
-        "name": "BaseTextFieldProps"
-      },
-      "required": false,
-      "type": {
-        "name": "ReactNode"
-      }
-    },
-    "InputLabelProps": {
-      "defaultValue": null,
-      "description": "Props applied to the [`InputLabel`](/api/input-label/) element.",
-      "name": "InputLabelProps",
-      "parent": {
-        "fileName": "material-ui-pickers/node_modules/@material-ui/core/TextField/TextField.d.ts",
-        "name": "BaseTextFieldProps"
-      },
-      "required": false,
-      "type": {
-        "name": "Partial<InputLabelProps>"
-      }
-    },
-    "inputRef": {
-      "defaultValue": null,
-      "description": "Pass a ref to the `input` element.",
-      "name": "inputRef",
-      "parent": {
-        "fileName": "material-ui-pickers/node_modules/@material-ui/core/TextField/TextField.d.ts",
-        "name": "BaseTextFieldProps"
-      },
-      "required": false,
-      "type": {
-        "name": "(instance: any) => void"
-      }
-    },
-    "multiline": {
-      "defaultValue": null,
-      "description": "If `true`, a textarea element will be rendered instead of an input.",
-      "name": "multiline",
-      "parent": {
-        "fileName": "material-ui-pickers/node_modules/@material-ui/core/TextField/TextField.d.ts",
-        "name": "BaseTextFieldProps"
-      },
-      "required": false,
-      "type": {
-        "name": "boolean"
-      }
-    },
-    "name": {
-      "defaultValue": null,
-      "description": "Name attribute of the `input` element.",
-      "name": "name",
-      "parent": {
-        "fileName": "material-ui-pickers/node_modules/@material-ui/core/TextField/TextField.d.ts",
-        "name": "BaseTextFieldProps"
-      },
-      "required": false,
-      "type": {
-        "name": "string"
-      }
-    },
-    "rows": {
-      "defaultValue": null,
-      "description": "Number of rows to display when multiline option is set to true.",
-      "name": "rows",
-      "parent": {
-        "fileName": "material-ui-pickers/node_modules/@material-ui/core/TextField/TextField.d.ts",
-        "name": "BaseTextFieldProps"
-      },
-      "required": false,
-      "type": {
-        "name": "string | number"
-      }
-    },
-    "rowsMax": {
-      "defaultValue": null,
-      "description": "Maximum number of rows to display when multiline option is set to true.",
-      "name": "rowsMax",
-      "parent": {
-        "fileName": "material-ui-pickers/node_modules/@material-ui/core/TextField/TextField.d.ts",
-        "name": "BaseTextFieldProps"
-      },
-      "required": false,
-      "type": {
-        "name": "string | number"
-      }
-    },
-    "SelectProps": {
-      "defaultValue": null,
-      "description": "Props applied to the [`Select`](/api/select/) element.",
-      "name": "SelectProps",
-      "parent": {
-        "fileName": "material-ui-pickers/node_modules/@material-ui/core/TextField/TextField.d.ts",
-        "name": "BaseTextFieldProps"
-      },
-      "required": false,
-      "type": {
-        "name": "Partial<SelectProps>"
-      }
-    },
-    "type": {
-      "defaultValue": null,
-      "description": "Type of the `input` element. It should be [a valid HTML5 input type](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input#Form_%3Cinput%3E_types).",
-      "name": "type",
-      "parent": {
-        "fileName": "material-ui-pickers/node_modules/@material-ui/core/TextField/TextField.d.ts",
-        "name": "BaseTextFieldProps"
       },
       "required": false,
       "type": {
@@ -1647,7 +1051,7 @@
       },
       "required": false,
       "type": {
-        "name": "\"filled\" | \"standard\" | \"outlined\""
+        "name": "\"standard\" | \"outlined\" | \"filled\""
       }
     },
     "TextFieldComponent": {
@@ -1716,7 +1120,7 @@
       },
       "required": false,
       "type": {
-        "name": "{Partial<InputAdornmentProps>}"
+        "name": "Partial<InputAdornmentProps>"
       }
     },
     "KeyboardButtonProps": {
@@ -1729,7 +1133,7 @@
       },
       "required": false,
       "type": {
-        "name": "{Partial<IconButtonProps>}"
+        "name": "Partial<IconButtonProps>"
       }
     },
     "rifmFormatter": {
@@ -1755,7 +1159,7 @@
       },
       "required": false,
       "type": {
-        "name": "{Array<\"year\" | \"date\" | \"month\">}"
+        "name": "Array<\"year\" | \"date\" | \"month\">"
       }
     },
     "openTo": {
@@ -1768,7 +1172,7 @@
       },
       "required": false,
       "type": {
-        "name": "\"year\" | \"date\" | \"month\""
+        "name": "\"date\" | \"year\" | \"month\""
       }
     },
     "minDate": {
@@ -1938,7 +1342,7 @@
       },
       "required": false,
       "type": {
-        "name": "{Partial<IconButtonProps>}"
+        "name": "Partial<IconButtonProps>"
       }
     },
     "rightArrowButtonProps": {
@@ -1951,7 +1355,7 @@
       },
       "required": false,
       "type": {
-        "name": "{Partial<IconButtonProps>}"
+        "name": "Partial<IconButtonProps>"
       }
     },
     "shouldDisableDate": {
@@ -2096,7 +1500,7 @@
     },
     "disabled": {
       "defaultValue": null,
-      "description": "Disable picker and text field\nIf `true`, the `input` element will be disabled.",
+      "description": "Disable picker and text field",
       "name": "disabled",
       "parent": {
         "fileName": "material-ui-pickers/lib/src/typings/BasePicker.tsx",
@@ -2312,318 +1716,6 @@
         "name": "Partial<PopoverProps>"
       }
     },
-    "label": {
-      "defaultValue": null,
-      "description": "The label content.",
-      "name": "label",
-      "parent": {
-        "fileName": "material-ui-pickers/node_modules/@material-ui/core/TextField/TextField.d.ts",
-        "name": "BaseTextFieldProps"
-      },
-      "required": false,
-      "type": {
-        "name": "ReactNode"
-      }
-    },
-    "select": {
-      "defaultValue": null,
-      "description": "Render a [`Select`](/api/select/) element while passing the Input element to `Select` as `input` parameter.\nIf this option is set you must pass the options of the select as children.",
-      "name": "select",
-      "parent": {
-        "fileName": "material-ui-pickers/node_modules/@material-ui/core/TextField/TextField.d.ts",
-        "name": "BaseTextFieldProps"
-      },
-      "required": false,
-      "type": {
-        "name": "boolean"
-      }
-    },
-    "children": {
-      "defaultValue": null,
-      "description": "The contents of the form control.\n@ignore",
-      "name": "children",
-      "parent": {
-        "fileName": "material-ui-pickers/node_modules/@material-ui/core/TextField/TextField.d.ts",
-        "name": "BaseTextFieldProps"
-      },
-      "required": false,
-      "type": {
-        "name": "ReactNode"
-      }
-    },
-    "color": {
-      "defaultValue": null,
-      "description": "The color of the component. It supports those theme colors that make sense for this component.",
-      "name": "color",
-      "parent": {
-        "fileName": "material-ui-pickers/node_modules/@material-ui/core/TextField/TextField.d.ts",
-        "name": "BaseTextFieldProps"
-      },
-      "required": false,
-      "type": {
-        "name": "\"primary\" | \"secondary\""
-      }
-    },
-    "error": {
-      "defaultValue": null,
-      "description": "If `true`, the label will be displayed in an error state.",
-      "name": "error",
-      "parent": {
-        "fileName": "material-ui-pickers/node_modules/@material-ui/core/TextField/TextField.d.ts",
-        "name": "BaseTextFieldProps"
-      },
-      "required": false,
-      "type": {
-        "name": "boolean"
-      }
-    },
-    "fullWidth": {
-      "defaultValue": null,
-      "description": "If `true`, the input will take up the full width of its container.",
-      "name": "fullWidth",
-      "parent": {
-        "fileName": "material-ui-pickers/node_modules/@material-ui/core/TextField/TextField.d.ts",
-        "name": "BaseTextFieldProps"
-      },
-      "required": false,
-      "type": {
-        "name": "boolean"
-      }
-    },
-    "margin": {
-      "defaultValue": null,
-      "description": "If `dense` or `normal`, will adjust vertical spacing of this and contained components.",
-      "name": "margin",
-      "parent": {
-        "fileName": "material-ui-pickers/node_modules/@material-ui/core/TextField/TextField.d.ts",
-        "name": "BaseTextFieldProps"
-      },
-      "required": false,
-      "type": {
-        "name": "\"none\" | \"dense\" | \"normal\""
-      }
-    },
-    "required": {
-      "defaultValue": null,
-      "description": "If `true`, the label is displayed as required and the `input` element will be required.",
-      "name": "required",
-      "parent": {
-        "fileName": "material-ui-pickers/node_modules/@material-ui/core/TextField/TextField.d.ts",
-        "name": "BaseTextFieldProps"
-      },
-      "required": false,
-      "type": {
-        "name": "boolean"
-      }
-    },
-    "size": {
-      "defaultValue": null,
-      "description": "The size of the text field.",
-      "name": "size",
-      "parent": {
-        "fileName": "material-ui-pickers/node_modules/@material-ui/core/TextField/TextField.d.ts",
-        "name": "BaseTextFieldProps"
-      },
-      "required": false,
-      "type": {
-        "name": "\"small\" | \"medium\""
-      }
-    },
-    "defaultValue": {
-      "defaultValue": null,
-      "description": "The default value of the `input` element.",
-      "name": "defaultValue",
-      "parent": {
-        "fileName": "material-ui-pickers/node_modules/@material-ui/core/TextField/TextField.d.ts",
-        "name": "BaseTextFieldProps"
-      },
-      "required": false,
-      "type": {
-        "name": "unknown"
-      }
-    },
-    "id": {
-      "defaultValue": null,
-      "description": "The id of the `input` element.\nUse this prop to make `label` and `helperText` accessible for screen readers.",
-      "name": "id",
-      "parent": {
-        "fileName": "material-ui-pickers/node_modules/@material-ui/core/TextField/TextField.d.ts",
-        "name": "BaseTextFieldProps"
-      },
-      "required": false,
-      "type": {
-        "name": "string"
-      }
-    },
-    "placeholder": {
-      "defaultValue": null,
-      "description": "The short hint displayed in the input before the user enters a value.",
-      "name": "placeholder",
-      "parent": {
-        "fileName": "material-ui-pickers/node_modules/@material-ui/core/TextField/TextField.d.ts",
-        "name": "BaseTextFieldProps"
-      },
-      "required": false,
-      "type": {
-        "name": "string"
-      }
-    },
-    "autoComplete": {
-      "defaultValue": null,
-      "description": "This prop helps users to fill forms faster, especially on mobile devices.\nThe name can be confusing, as it's more like an autofill.\nYou can learn more about it [following the specification](https://html.spec.whatwg.org/multipage/form-control-infrastructure.html#autofill).",
-      "name": "autoComplete",
-      "parent": {
-        "fileName": "material-ui-pickers/node_modules/@material-ui/core/TextField/TextField.d.ts",
-        "name": "BaseTextFieldProps"
-      },
-      "required": false,
-      "type": {
-        "name": "string"
-      }
-    },
-    "autoFocus": {
-      "defaultValue": null,
-      "description": "If `true`, the `input` element will be focused during the first mount.",
-      "name": "autoFocus",
-      "parent": {
-        "fileName": "material-ui-pickers/node_modules/@material-ui/core/TextField/TextField.d.ts",
-        "name": "BaseTextFieldProps"
-      },
-      "required": false,
-      "type": {
-        "name": "boolean"
-      }
-    },
-    "FormHelperTextProps": {
-      "defaultValue": null,
-      "description": "Props applied to the [`FormHelperText`](/api/form-helper-text/) element.",
-      "name": "FormHelperTextProps",
-      "parent": {
-        "fileName": "material-ui-pickers/node_modules/@material-ui/core/TextField/TextField.d.ts",
-        "name": "BaseTextFieldProps"
-      },
-      "required": false,
-      "type": {
-        "name": "Partial<OverrideProps<FormHelperTextTypeMap<{}, \"p\">, \"p\">>"
-      }
-    },
-    "helperText": {
-      "defaultValue": null,
-      "description": "The helper text content.",
-      "name": "helperText",
-      "parent": {
-        "fileName": "material-ui-pickers/node_modules/@material-ui/core/TextField/TextField.d.ts",
-        "name": "BaseTextFieldProps"
-      },
-      "required": false,
-      "type": {
-        "name": "ReactNode"
-      }
-    },
-    "InputLabelProps": {
-      "defaultValue": null,
-      "description": "Props applied to the [`InputLabel`](/api/input-label/) element.",
-      "name": "InputLabelProps",
-      "parent": {
-        "fileName": "material-ui-pickers/node_modules/@material-ui/core/TextField/TextField.d.ts",
-        "name": "BaseTextFieldProps"
-      },
-      "required": false,
-      "type": {
-        "name": "Partial<InputLabelProps>"
-      }
-    },
-    "inputRef": {
-      "defaultValue": null,
-      "description": "Pass a ref to the `input` element.",
-      "name": "inputRef",
-      "parent": {
-        "fileName": "material-ui-pickers/node_modules/@material-ui/core/TextField/TextField.d.ts",
-        "name": "BaseTextFieldProps"
-      },
-      "required": false,
-      "type": {
-        "name": "(instance: any) => void"
-      }
-    },
-    "multiline": {
-      "defaultValue": null,
-      "description": "If `true`, a textarea element will be rendered instead of an input.",
-      "name": "multiline",
-      "parent": {
-        "fileName": "material-ui-pickers/node_modules/@material-ui/core/TextField/TextField.d.ts",
-        "name": "BaseTextFieldProps"
-      },
-      "required": false,
-      "type": {
-        "name": "boolean"
-      }
-    },
-    "name": {
-      "defaultValue": null,
-      "description": "Name attribute of the `input` element.",
-      "name": "name",
-      "parent": {
-        "fileName": "material-ui-pickers/node_modules/@material-ui/core/TextField/TextField.d.ts",
-        "name": "BaseTextFieldProps"
-      },
-      "required": false,
-      "type": {
-        "name": "string"
-      }
-    },
-    "rows": {
-      "defaultValue": null,
-      "description": "Number of rows to display when multiline option is set to true.",
-      "name": "rows",
-      "parent": {
-        "fileName": "material-ui-pickers/node_modules/@material-ui/core/TextField/TextField.d.ts",
-        "name": "BaseTextFieldProps"
-      },
-      "required": false,
-      "type": {
-        "name": "string | number"
-      }
-    },
-    "rowsMax": {
-      "defaultValue": null,
-      "description": "Maximum number of rows to display when multiline option is set to true.",
-      "name": "rowsMax",
-      "parent": {
-        "fileName": "material-ui-pickers/node_modules/@material-ui/core/TextField/TextField.d.ts",
-        "name": "BaseTextFieldProps"
-      },
-      "required": false,
-      "type": {
-        "name": "string | number"
-      }
-    },
-    "SelectProps": {
-      "defaultValue": null,
-      "description": "Props applied to the [`Select`](/api/select/) element.",
-      "name": "SelectProps",
-      "parent": {
-        "fileName": "material-ui-pickers/node_modules/@material-ui/core/TextField/TextField.d.ts",
-        "name": "BaseTextFieldProps"
-      },
-      "required": false,
-      "type": {
-        "name": "Partial<SelectProps>"
-      }
-    },
-    "type": {
-      "defaultValue": null,
-      "description": "Type of the `input` element. It should be [a valid HTML5 input type](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input#Form_%3Cinput%3E_types).",
-      "name": "type",
-      "parent": {
-        "fileName": "material-ui-pickers/node_modules/@material-ui/core/TextField/TextField.d.ts",
-        "name": "BaseTextFieldProps"
-      },
-      "required": false,
-      "type": {
-        "name": "string"
-      }
-    },
     "inputVariant": {
       "defaultValue": null,
       "description": "Pass material-ui text field variant down, bypass internal variant prop",
@@ -2634,7 +1726,7 @@
       },
       "required": false,
       "type": {
-        "name": "\"filled\" | \"standard\" | \"outlined\""
+        "name": "\"standard\" | \"outlined\" | \"filled\""
       }
     },
     "TextFieldComponent": {
@@ -2818,6 +1910,21 @@
         "name": "string"
       }
     },
+    "variant": {
+      "defaultValue": {
+        "value": "'dialog'"
+      },
+      "description": "Picker container option",
+      "name": "variant",
+      "parent": {
+        "fileName": "material-ui-pickers/lib/src/typings/BasePicker.tsx",
+        "name": "BasePickerProps"
+      },
+      "required": false,
+      "type": {
+        "name": "\"dialog\" | \"inline\" | \"static\""
+      }
+    },
     "onError": {
       "defaultValue": null,
       "description": "Callback fired when new error should be displayed\n(!! This is a side effect. Be careful if you want to rerender the component)",
@@ -2846,8 +1953,34 @@
     },
     "disabled": {
       "defaultValue": null,
-      "description": "Disable picker and text field\nIf `true`, the `input` element will be disabled.",
+      "description": "Disable picker and text field",
       "name": "disabled",
+      "parent": {
+        "fileName": "material-ui-pickers/lib/src/typings/BasePicker.tsx",
+        "name": "BasePickerProps"
+      },
+      "required": false,
+      "type": {
+        "name": "boolean"
+      }
+    },
+    "onClose": {
+      "defaultValue": null,
+      "description": "On close callback",
+      "name": "onClose",
+      "parent": {
+        "fileName": "material-ui-pickers/lib/src/typings/BasePicker.tsx",
+        "name": "BasePickerProps"
+      },
+      "required": false,
+      "type": {
+        "name": "() => void"
+      }
+    },
+    "readOnly": {
+      "defaultValue": null,
+      "description": "Make picker read only",
+      "name": "readOnly",
       "parent": {
         "fileName": "material-ui-pickers/lib/src/typings/BasePicker.tsx",
         "name": "BasePickerProps"
@@ -2863,19 +1996,6 @@
       },
       "description": "Auto accept date on selection",
       "name": "autoOk",
-      "parent": {
-        "fileName": "material-ui-pickers/lib/src/typings/BasePicker.tsx",
-        "name": "BasePickerProps"
-      },
-      "required": false,
-      "type": {
-        "name": "boolean"
-      }
-    },
-    "readOnly": {
-      "defaultValue": null,
-      "description": "Make picker read only",
-      "name": "readOnly",
       "parent": {
         "fileName": "material-ui-pickers/lib/src/typings/BasePicker.tsx",
         "name": "BasePickerProps"
@@ -2954,19 +2074,6 @@
         "name": "() => void"
       }
     },
-    "onClose": {
-      "defaultValue": null,
-      "description": "On close callback",
-      "name": "onClose",
-      "parent": {
-        "fileName": "material-ui-pickers/lib/src/typings/BasePicker.tsx",
-        "name": "BasePickerProps"
-      },
-      "required": false,
-      "type": {
-        "name": "() => void"
-      }
-    },
     "disableToolbar": {
       "defaultValue": {
         "value": "false"
@@ -3023,32 +2130,6 @@
         "name": "Partial<PopoverProps>"
       }
     },
-    "label": {
-      "defaultValue": null,
-      "description": "The label content.",
-      "name": "label",
-      "parent": {
-        "fileName": "material-ui-pickers/node_modules/@material-ui/core/TextField/TextField.d.ts",
-        "name": "BaseTextFieldProps"
-      },
-      "required": false,
-      "type": {
-        "name": "ReactNode"
-      }
-    },
-    "select": {
-      "defaultValue": null,
-      "description": "Render a [`Select`](/api/select/) element while passing the Input element to `Select` as `input` parameter.\nIf this option is set you must pass the options of the select as children.",
-      "name": "select",
-      "parent": {
-        "fileName": "material-ui-pickers/node_modules/@material-ui/core/TextField/TextField.d.ts",
-        "name": "BaseTextFieldProps"
-      },
-      "required": false,
-      "type": {
-        "name": "boolean"
-      }
-    },
     "mask": {
       "defaultValue": null,
       "description": "Custom mask. Can be used to override generate from format. (e.g. __/__/____ __:__)",
@@ -3056,292 +2137,6 @@
       "parent": {
         "fileName": "material-ui-pickers/lib/src/_shared/KeyboardDateInput.tsx",
         "name": "KeyboardDateInputProps"
-      },
-      "required": false,
-      "type": {
-        "name": "string"
-      }
-    },
-    "children": {
-      "defaultValue": null,
-      "description": "The contents of the form control.\n@ignore",
-      "name": "children",
-      "parent": {
-        "fileName": "material-ui-pickers/node_modules/@material-ui/core/TextField/TextField.d.ts",
-        "name": "BaseTextFieldProps"
-      },
-      "required": false,
-      "type": {
-        "name": "ReactNode"
-      }
-    },
-    "color": {
-      "defaultValue": null,
-      "description": "The color of the component. It supports those theme colors that make sense for this component.",
-      "name": "color",
-      "parent": {
-        "fileName": "material-ui-pickers/node_modules/@material-ui/core/TextField/TextField.d.ts",
-        "name": "BaseTextFieldProps"
-      },
-      "required": false,
-      "type": {
-        "name": "\"primary\" | \"secondary\""
-      }
-    },
-    "error": {
-      "defaultValue": null,
-      "description": "If `true`, the label will be displayed in an error state.",
-      "name": "error",
-      "parent": {
-        "fileName": "material-ui-pickers/node_modules/@material-ui/core/TextField/TextField.d.ts",
-        "name": "BaseTextFieldProps"
-      },
-      "required": false,
-      "type": {
-        "name": "boolean"
-      }
-    },
-    "fullWidth": {
-      "defaultValue": null,
-      "description": "If `true`, the input will take up the full width of its container.",
-      "name": "fullWidth",
-      "parent": {
-        "fileName": "material-ui-pickers/node_modules/@material-ui/core/TextField/TextField.d.ts",
-        "name": "BaseTextFieldProps"
-      },
-      "required": false,
-      "type": {
-        "name": "boolean"
-      }
-    },
-    "margin": {
-      "defaultValue": null,
-      "description": "If `dense` or `normal`, will adjust vertical spacing of this and contained components.",
-      "name": "margin",
-      "parent": {
-        "fileName": "material-ui-pickers/node_modules/@material-ui/core/TextField/TextField.d.ts",
-        "name": "BaseTextFieldProps"
-      },
-      "required": false,
-      "type": {
-        "name": "\"none\" | \"dense\" | \"normal\""
-      }
-    },
-    "required": {
-      "defaultValue": null,
-      "description": "If `true`, the label is displayed as required and the `input` element will be required.",
-      "name": "required",
-      "parent": {
-        "fileName": "material-ui-pickers/node_modules/@material-ui/core/TextField/TextField.d.ts",
-        "name": "BaseTextFieldProps"
-      },
-      "required": false,
-      "type": {
-        "name": "boolean"
-      }
-    },
-    "size": {
-      "defaultValue": null,
-      "description": "The size of the text field.",
-      "name": "size",
-      "parent": {
-        "fileName": "material-ui-pickers/node_modules/@material-ui/core/TextField/TextField.d.ts",
-        "name": "BaseTextFieldProps"
-      },
-      "required": false,
-      "type": {
-        "name": "\"small\" | \"medium\""
-      }
-    },
-    "defaultValue": {
-      "defaultValue": null,
-      "description": "The default value of the `input` element.",
-      "name": "defaultValue",
-      "parent": {
-        "fileName": "material-ui-pickers/node_modules/@material-ui/core/TextField/TextField.d.ts",
-        "name": "BaseTextFieldProps"
-      },
-      "required": false,
-      "type": {
-        "name": "unknown"
-      }
-    },
-    "id": {
-      "defaultValue": null,
-      "description": "The id of the `input` element.\nUse this prop to make `label` and `helperText` accessible for screen readers.",
-      "name": "id",
-      "parent": {
-        "fileName": "material-ui-pickers/node_modules/@material-ui/core/TextField/TextField.d.ts",
-        "name": "BaseTextFieldProps"
-      },
-      "required": false,
-      "type": {
-        "name": "string"
-      }
-    },
-    "placeholder": {
-      "defaultValue": null,
-      "description": "The short hint displayed in the input before the user enters a value.",
-      "name": "placeholder",
-      "parent": {
-        "fileName": "material-ui-pickers/node_modules/@material-ui/core/TextField/TextField.d.ts",
-        "name": "BaseTextFieldProps"
-      },
-      "required": false,
-      "type": {
-        "name": "string"
-      }
-    },
-    "autoComplete": {
-      "defaultValue": null,
-      "description": "This prop helps users to fill forms faster, especially on mobile devices.\nThe name can be confusing, as it's more like an autofill.\nYou can learn more about it [following the specification](https://html.spec.whatwg.org/multipage/form-control-infrastructure.html#autofill).",
-      "name": "autoComplete",
-      "parent": {
-        "fileName": "material-ui-pickers/node_modules/@material-ui/core/TextField/TextField.d.ts",
-        "name": "BaseTextFieldProps"
-      },
-      "required": false,
-      "type": {
-        "name": "string"
-      }
-    },
-    "autoFocus": {
-      "defaultValue": null,
-      "description": "If `true`, the `input` element will be focused during the first mount.",
-      "name": "autoFocus",
-      "parent": {
-        "fileName": "material-ui-pickers/node_modules/@material-ui/core/TextField/TextField.d.ts",
-        "name": "BaseTextFieldProps"
-      },
-      "required": false,
-      "type": {
-        "name": "boolean"
-      }
-    },
-    "FormHelperTextProps": {
-      "defaultValue": null,
-      "description": "Props applied to the [`FormHelperText`](/api/form-helper-text/) element.",
-      "name": "FormHelperTextProps",
-      "parent": {
-        "fileName": "material-ui-pickers/node_modules/@material-ui/core/TextField/TextField.d.ts",
-        "name": "BaseTextFieldProps"
-      },
-      "required": false,
-      "type": {
-        "name": "Partial<OverrideProps<FormHelperTextTypeMap<{}, \"p\">, \"p\">>"
-      }
-    },
-    "helperText": {
-      "defaultValue": null,
-      "description": "The helper text content.",
-      "name": "helperText",
-      "parent": {
-        "fileName": "material-ui-pickers/node_modules/@material-ui/core/TextField/TextField.d.ts",
-        "name": "BaseTextFieldProps"
-      },
-      "required": false,
-      "type": {
-        "name": "ReactNode"
-      }
-    },
-    "InputLabelProps": {
-      "defaultValue": null,
-      "description": "Props applied to the [`InputLabel`](/api/input-label/) element.",
-      "name": "InputLabelProps",
-      "parent": {
-        "fileName": "material-ui-pickers/node_modules/@material-ui/core/TextField/TextField.d.ts",
-        "name": "BaseTextFieldProps"
-      },
-      "required": false,
-      "type": {
-        "name": "Partial<InputLabelProps>"
-      }
-    },
-    "inputRef": {
-      "defaultValue": null,
-      "description": "Pass a ref to the `input` element.",
-      "name": "inputRef",
-      "parent": {
-        "fileName": "material-ui-pickers/node_modules/@material-ui/core/TextField/TextField.d.ts",
-        "name": "BaseTextFieldProps"
-      },
-      "required": false,
-      "type": {
-        "name": "(instance: any) => void"
-      }
-    },
-    "multiline": {
-      "defaultValue": null,
-      "description": "If `true`, a textarea element will be rendered instead of an input.",
-      "name": "multiline",
-      "parent": {
-        "fileName": "material-ui-pickers/node_modules/@material-ui/core/TextField/TextField.d.ts",
-        "name": "BaseTextFieldProps"
-      },
-      "required": false,
-      "type": {
-        "name": "boolean"
-      }
-    },
-    "name": {
-      "defaultValue": null,
-      "description": "Name attribute of the `input` element.",
-      "name": "name",
-      "parent": {
-        "fileName": "material-ui-pickers/node_modules/@material-ui/core/TextField/TextField.d.ts",
-        "name": "BaseTextFieldProps"
-      },
-      "required": false,
-      "type": {
-        "name": "string"
-      }
-    },
-    "rows": {
-      "defaultValue": null,
-      "description": "Number of rows to display when multiline option is set to true.",
-      "name": "rows",
-      "parent": {
-        "fileName": "material-ui-pickers/node_modules/@material-ui/core/TextField/TextField.d.ts",
-        "name": "BaseTextFieldProps"
-      },
-      "required": false,
-      "type": {
-        "name": "string | number"
-      }
-    },
-    "rowsMax": {
-      "defaultValue": null,
-      "description": "Maximum number of rows to display when multiline option is set to true.",
-      "name": "rowsMax",
-      "parent": {
-        "fileName": "material-ui-pickers/node_modules/@material-ui/core/TextField/TextField.d.ts",
-        "name": "BaseTextFieldProps"
-      },
-      "required": false,
-      "type": {
-        "name": "string | number"
-      }
-    },
-    "SelectProps": {
-      "defaultValue": null,
-      "description": "Props applied to the [`Select`](/api/select/) element.",
-      "name": "SelectProps",
-      "parent": {
-        "fileName": "material-ui-pickers/node_modules/@material-ui/core/TextField/TextField.d.ts",
-        "name": "BaseTextFieldProps"
-      },
-      "required": false,
-      "type": {
-        "name": "Partial<SelectProps>"
-      }
-    },
-    "type": {
-      "defaultValue": null,
-      "description": "Type of the `input` element. It should be [a valid HTML5 input type](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input#Form_%3Cinput%3E_types).",
-      "name": "type",
-      "parent": {
-        "fileName": "material-ui-pickers/node_modules/@material-ui/core/TextField/TextField.d.ts",
-        "name": "BaseTextFieldProps"
       },
       "required": false,
       "type": {
@@ -3358,7 +2153,7 @@
       },
       "required": false,
       "type": {
-        "name": "\"filled\" | \"standard\" | \"outlined\""
+        "name": "\"standard\" | \"outlined\" | \"filled\""
       }
     },
     "TextFieldComponent": {
@@ -3427,7 +2222,7 @@
       },
       "required": false,
       "type": {
-        "name": "{Partial<InputAdornmentProps>}"
+        "name": "Partial<InputAdornmentProps>"
       }
     },
     "KeyboardButtonProps": {
@@ -3440,7 +2235,7 @@
       },
       "required": false,
       "type": {
-        "name": "{Partial<IconButtonProps>}"
+        "name": "Partial<IconButtonProps>"
       }
     },
     "rifmFormatter": {
@@ -3615,7 +2410,7 @@
     },
     "disabled": {
       "defaultValue": null,
-      "description": "Disable picker and text field\nIf `true`, the `input` element will be disabled.",
+      "description": "Disable picker and text field",
       "name": "disabled",
       "parent": {
         "fileName": "material-ui-pickers/lib/src/typings/BasePicker.tsx",
@@ -3831,318 +2626,6 @@
         "name": "Partial<PopoverProps>"
       }
     },
-    "label": {
-      "defaultValue": null,
-      "description": "The label content.",
-      "name": "label",
-      "parent": {
-        "fileName": "material-ui-pickers/node_modules/@material-ui/core/TextField/TextField.d.ts",
-        "name": "BaseTextFieldProps"
-      },
-      "required": false,
-      "type": {
-        "name": "ReactNode"
-      }
-    },
-    "select": {
-      "defaultValue": null,
-      "description": "Render a [`Select`](/api/select/) element while passing the Input element to `Select` as `input` parameter.\nIf this option is set you must pass the options of the select as children.",
-      "name": "select",
-      "parent": {
-        "fileName": "material-ui-pickers/node_modules/@material-ui/core/TextField/TextField.d.ts",
-        "name": "BaseTextFieldProps"
-      },
-      "required": false,
-      "type": {
-        "name": "boolean"
-      }
-    },
-    "children": {
-      "defaultValue": null,
-      "description": "The contents of the form control.\n@ignore",
-      "name": "children",
-      "parent": {
-        "fileName": "material-ui-pickers/node_modules/@material-ui/core/TextField/TextField.d.ts",
-        "name": "BaseTextFieldProps"
-      },
-      "required": false,
-      "type": {
-        "name": "ReactNode"
-      }
-    },
-    "color": {
-      "defaultValue": null,
-      "description": "The color of the component. It supports those theme colors that make sense for this component.",
-      "name": "color",
-      "parent": {
-        "fileName": "material-ui-pickers/node_modules/@material-ui/core/TextField/TextField.d.ts",
-        "name": "BaseTextFieldProps"
-      },
-      "required": false,
-      "type": {
-        "name": "\"primary\" | \"secondary\""
-      }
-    },
-    "error": {
-      "defaultValue": null,
-      "description": "If `true`, the label will be displayed in an error state.",
-      "name": "error",
-      "parent": {
-        "fileName": "material-ui-pickers/node_modules/@material-ui/core/TextField/TextField.d.ts",
-        "name": "BaseTextFieldProps"
-      },
-      "required": false,
-      "type": {
-        "name": "boolean"
-      }
-    },
-    "fullWidth": {
-      "defaultValue": null,
-      "description": "If `true`, the input will take up the full width of its container.",
-      "name": "fullWidth",
-      "parent": {
-        "fileName": "material-ui-pickers/node_modules/@material-ui/core/TextField/TextField.d.ts",
-        "name": "BaseTextFieldProps"
-      },
-      "required": false,
-      "type": {
-        "name": "boolean"
-      }
-    },
-    "margin": {
-      "defaultValue": null,
-      "description": "If `dense` or `normal`, will adjust vertical spacing of this and contained components.",
-      "name": "margin",
-      "parent": {
-        "fileName": "material-ui-pickers/node_modules/@material-ui/core/TextField/TextField.d.ts",
-        "name": "BaseTextFieldProps"
-      },
-      "required": false,
-      "type": {
-        "name": "\"none\" | \"dense\" | \"normal\""
-      }
-    },
-    "required": {
-      "defaultValue": null,
-      "description": "If `true`, the label is displayed as required and the `input` element will be required.",
-      "name": "required",
-      "parent": {
-        "fileName": "material-ui-pickers/node_modules/@material-ui/core/TextField/TextField.d.ts",
-        "name": "BaseTextFieldProps"
-      },
-      "required": false,
-      "type": {
-        "name": "boolean"
-      }
-    },
-    "size": {
-      "defaultValue": null,
-      "description": "The size of the text field.",
-      "name": "size",
-      "parent": {
-        "fileName": "material-ui-pickers/node_modules/@material-ui/core/TextField/TextField.d.ts",
-        "name": "BaseTextFieldProps"
-      },
-      "required": false,
-      "type": {
-        "name": "\"small\" | \"medium\""
-      }
-    },
-    "defaultValue": {
-      "defaultValue": null,
-      "description": "The default value of the `input` element.",
-      "name": "defaultValue",
-      "parent": {
-        "fileName": "material-ui-pickers/node_modules/@material-ui/core/TextField/TextField.d.ts",
-        "name": "BaseTextFieldProps"
-      },
-      "required": false,
-      "type": {
-        "name": "unknown"
-      }
-    },
-    "id": {
-      "defaultValue": null,
-      "description": "The id of the `input` element.\nUse this prop to make `label` and `helperText` accessible for screen readers.",
-      "name": "id",
-      "parent": {
-        "fileName": "material-ui-pickers/node_modules/@material-ui/core/TextField/TextField.d.ts",
-        "name": "BaseTextFieldProps"
-      },
-      "required": false,
-      "type": {
-        "name": "string"
-      }
-    },
-    "placeholder": {
-      "defaultValue": null,
-      "description": "The short hint displayed in the input before the user enters a value.",
-      "name": "placeholder",
-      "parent": {
-        "fileName": "material-ui-pickers/node_modules/@material-ui/core/TextField/TextField.d.ts",
-        "name": "BaseTextFieldProps"
-      },
-      "required": false,
-      "type": {
-        "name": "string"
-      }
-    },
-    "autoComplete": {
-      "defaultValue": null,
-      "description": "This prop helps users to fill forms faster, especially on mobile devices.\nThe name can be confusing, as it's more like an autofill.\nYou can learn more about it [following the specification](https://html.spec.whatwg.org/multipage/form-control-infrastructure.html#autofill).",
-      "name": "autoComplete",
-      "parent": {
-        "fileName": "material-ui-pickers/node_modules/@material-ui/core/TextField/TextField.d.ts",
-        "name": "BaseTextFieldProps"
-      },
-      "required": false,
-      "type": {
-        "name": "string"
-      }
-    },
-    "autoFocus": {
-      "defaultValue": null,
-      "description": "If `true`, the `input` element will be focused during the first mount.",
-      "name": "autoFocus",
-      "parent": {
-        "fileName": "material-ui-pickers/node_modules/@material-ui/core/TextField/TextField.d.ts",
-        "name": "BaseTextFieldProps"
-      },
-      "required": false,
-      "type": {
-        "name": "boolean"
-      }
-    },
-    "FormHelperTextProps": {
-      "defaultValue": null,
-      "description": "Props applied to the [`FormHelperText`](/api/form-helper-text/) element.",
-      "name": "FormHelperTextProps",
-      "parent": {
-        "fileName": "material-ui-pickers/node_modules/@material-ui/core/TextField/TextField.d.ts",
-        "name": "BaseTextFieldProps"
-      },
-      "required": false,
-      "type": {
-        "name": "Partial<OverrideProps<FormHelperTextTypeMap<{}, \"p\">, \"p\">>"
-      }
-    },
-    "helperText": {
-      "defaultValue": null,
-      "description": "The helper text content.",
-      "name": "helperText",
-      "parent": {
-        "fileName": "material-ui-pickers/node_modules/@material-ui/core/TextField/TextField.d.ts",
-        "name": "BaseTextFieldProps"
-      },
-      "required": false,
-      "type": {
-        "name": "ReactNode"
-      }
-    },
-    "InputLabelProps": {
-      "defaultValue": null,
-      "description": "Props applied to the [`InputLabel`](/api/input-label/) element.",
-      "name": "InputLabelProps",
-      "parent": {
-        "fileName": "material-ui-pickers/node_modules/@material-ui/core/TextField/TextField.d.ts",
-        "name": "BaseTextFieldProps"
-      },
-      "required": false,
-      "type": {
-        "name": "Partial<InputLabelProps>"
-      }
-    },
-    "inputRef": {
-      "defaultValue": null,
-      "description": "Pass a ref to the `input` element.",
-      "name": "inputRef",
-      "parent": {
-        "fileName": "material-ui-pickers/node_modules/@material-ui/core/TextField/TextField.d.ts",
-        "name": "BaseTextFieldProps"
-      },
-      "required": false,
-      "type": {
-        "name": "(instance: any) => void"
-      }
-    },
-    "multiline": {
-      "defaultValue": null,
-      "description": "If `true`, a textarea element will be rendered instead of an input.",
-      "name": "multiline",
-      "parent": {
-        "fileName": "material-ui-pickers/node_modules/@material-ui/core/TextField/TextField.d.ts",
-        "name": "BaseTextFieldProps"
-      },
-      "required": false,
-      "type": {
-        "name": "boolean"
-      }
-    },
-    "name": {
-      "defaultValue": null,
-      "description": "Name attribute of the `input` element.",
-      "name": "name",
-      "parent": {
-        "fileName": "material-ui-pickers/node_modules/@material-ui/core/TextField/TextField.d.ts",
-        "name": "BaseTextFieldProps"
-      },
-      "required": false,
-      "type": {
-        "name": "string"
-      }
-    },
-    "rows": {
-      "defaultValue": null,
-      "description": "Number of rows to display when multiline option is set to true.",
-      "name": "rows",
-      "parent": {
-        "fileName": "material-ui-pickers/node_modules/@material-ui/core/TextField/TextField.d.ts",
-        "name": "BaseTextFieldProps"
-      },
-      "required": false,
-      "type": {
-        "name": "string | number"
-      }
-    },
-    "rowsMax": {
-      "defaultValue": null,
-      "description": "Maximum number of rows to display when multiline option is set to true.",
-      "name": "rowsMax",
-      "parent": {
-        "fileName": "material-ui-pickers/node_modules/@material-ui/core/TextField/TextField.d.ts",
-        "name": "BaseTextFieldProps"
-      },
-      "required": false,
-      "type": {
-        "name": "string | number"
-      }
-    },
-    "SelectProps": {
-      "defaultValue": null,
-      "description": "Props applied to the [`Select`](/api/select/) element.",
-      "name": "SelectProps",
-      "parent": {
-        "fileName": "material-ui-pickers/node_modules/@material-ui/core/TextField/TextField.d.ts",
-        "name": "BaseTextFieldProps"
-      },
-      "required": false,
-      "type": {
-        "name": "Partial<SelectProps>"
-      }
-    },
-    "type": {
-      "defaultValue": null,
-      "description": "Type of the `input` element. It should be [a valid HTML5 input type](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input#Form_%3Cinput%3E_types).",
-      "name": "type",
-      "parent": {
-        "fileName": "material-ui-pickers/node_modules/@material-ui/core/TextField/TextField.d.ts",
-        "name": "BaseTextFieldProps"
-      },
-      "required": false,
-      "type": {
-        "name": "string"
-      }
-    },
     "inputVariant": {
       "defaultValue": null,
       "description": "Pass material-ui text field variant down, bypass internal variant prop",
@@ -4153,7 +2636,7 @@
       },
       "required": false,
       "type": {
-        "name": "\"filled\" | \"standard\" | \"outlined\""
+        "name": "\"standard\" | \"outlined\" | \"filled\""
       }
     },
     "TextFieldComponent": {
@@ -4431,7 +2914,7 @@
       },
       "required": false,
       "type": {
-        "name": "{Partial<IconButtonProps>}"
+        "name": "Partial<IconButtonProps>"
       }
     },
     "rightArrowButtonProps": {
@@ -4444,7 +2927,7 @@
       },
       "required": false,
       "type": {
-        "name": "{Partial<IconButtonProps>}"
+        "name": "Partial<IconButtonProps>"
       }
     },
     "shouldDisableDate": {
@@ -4598,6 +3081,21 @@
         "name": "string"
       }
     },
+    "variant": {
+      "defaultValue": {
+        "value": "'dialog'"
+      },
+      "description": "Picker container option",
+      "name": "variant",
+      "parent": {
+        "fileName": "material-ui-pickers/lib/src/typings/BasePicker.tsx",
+        "name": "BasePickerProps"
+      },
+      "required": false,
+      "type": {
+        "name": "\"dialog\" | \"inline\" | \"static\""
+      }
+    },
     "onError": {
       "defaultValue": null,
       "description": "Callback fired when new error should be displayed\n(!! This is a side effect. Be careful if you want to rerender the component)",
@@ -4626,8 +3124,34 @@
     },
     "disabled": {
       "defaultValue": null,
-      "description": "Disable picker and text field\nIf `true`, the `input` element will be disabled.",
+      "description": "Disable picker and text field",
       "name": "disabled",
+      "parent": {
+        "fileName": "material-ui-pickers/lib/src/typings/BasePicker.tsx",
+        "name": "BasePickerProps"
+      },
+      "required": false,
+      "type": {
+        "name": "boolean"
+      }
+    },
+    "onClose": {
+      "defaultValue": null,
+      "description": "On close callback",
+      "name": "onClose",
+      "parent": {
+        "fileName": "material-ui-pickers/lib/src/typings/BasePicker.tsx",
+        "name": "BasePickerProps"
+      },
+      "required": false,
+      "type": {
+        "name": "() => void"
+      }
+    },
+    "readOnly": {
+      "defaultValue": null,
+      "description": "Make picker read only",
+      "name": "readOnly",
       "parent": {
         "fileName": "material-ui-pickers/lib/src/typings/BasePicker.tsx",
         "name": "BasePickerProps"
@@ -4643,19 +3167,6 @@
       },
       "description": "Auto accept date on selection",
       "name": "autoOk",
-      "parent": {
-        "fileName": "material-ui-pickers/lib/src/typings/BasePicker.tsx",
-        "name": "BasePickerProps"
-      },
-      "required": false,
-      "type": {
-        "name": "boolean"
-      }
-    },
-    "readOnly": {
-      "defaultValue": null,
-      "description": "Make picker read only",
-      "name": "readOnly",
       "parent": {
         "fileName": "material-ui-pickers/lib/src/typings/BasePicker.tsx",
         "name": "BasePickerProps"
@@ -4734,19 +3245,6 @@
         "name": "() => void"
       }
     },
-    "onClose": {
-      "defaultValue": null,
-      "description": "On close callback",
-      "name": "onClose",
-      "parent": {
-        "fileName": "material-ui-pickers/lib/src/typings/BasePicker.tsx",
-        "name": "BasePickerProps"
-      },
-      "required": false,
-      "type": {
-        "name": "() => void"
-      }
-    },
     "disableToolbar": {
       "defaultValue": {
         "value": "false"
@@ -4803,32 +3301,6 @@
         "name": "Partial<PopoverProps>"
       }
     },
-    "label": {
-      "defaultValue": null,
-      "description": "The label content.",
-      "name": "label",
-      "parent": {
-        "fileName": "material-ui-pickers/node_modules/@material-ui/core/TextField/TextField.d.ts",
-        "name": "BaseTextFieldProps"
-      },
-      "required": false,
-      "type": {
-        "name": "ReactNode"
-      }
-    },
-    "select": {
-      "defaultValue": null,
-      "description": "Render a [`Select`](/api/select/) element while passing the Input element to `Select` as `input` parameter.\nIf this option is set you must pass the options of the select as children.",
-      "name": "select",
-      "parent": {
-        "fileName": "material-ui-pickers/node_modules/@material-ui/core/TextField/TextField.d.ts",
-        "name": "BaseTextFieldProps"
-      },
-      "required": false,
-      "type": {
-        "name": "boolean"
-      }
-    },
     "mask": {
       "defaultValue": null,
       "description": "Custom mask. Can be used to override generate from format. (e.g. __/__/____ __:__)",
@@ -4836,292 +3308,6 @@
       "parent": {
         "fileName": "material-ui-pickers/lib/src/_shared/KeyboardDateInput.tsx",
         "name": "KeyboardDateInputProps"
-      },
-      "required": false,
-      "type": {
-        "name": "string"
-      }
-    },
-    "children": {
-      "defaultValue": null,
-      "description": "The contents of the form control.\n@ignore",
-      "name": "children",
-      "parent": {
-        "fileName": "material-ui-pickers/node_modules/@material-ui/core/TextField/TextField.d.ts",
-        "name": "BaseTextFieldProps"
-      },
-      "required": false,
-      "type": {
-        "name": "ReactNode"
-      }
-    },
-    "color": {
-      "defaultValue": null,
-      "description": "The color of the component. It supports those theme colors that make sense for this component.",
-      "name": "color",
-      "parent": {
-        "fileName": "material-ui-pickers/node_modules/@material-ui/core/TextField/TextField.d.ts",
-        "name": "BaseTextFieldProps"
-      },
-      "required": false,
-      "type": {
-        "name": "\"primary\" | \"secondary\""
-      }
-    },
-    "error": {
-      "defaultValue": null,
-      "description": "If `true`, the label will be displayed in an error state.",
-      "name": "error",
-      "parent": {
-        "fileName": "material-ui-pickers/node_modules/@material-ui/core/TextField/TextField.d.ts",
-        "name": "BaseTextFieldProps"
-      },
-      "required": false,
-      "type": {
-        "name": "boolean"
-      }
-    },
-    "fullWidth": {
-      "defaultValue": null,
-      "description": "If `true`, the input will take up the full width of its container.",
-      "name": "fullWidth",
-      "parent": {
-        "fileName": "material-ui-pickers/node_modules/@material-ui/core/TextField/TextField.d.ts",
-        "name": "BaseTextFieldProps"
-      },
-      "required": false,
-      "type": {
-        "name": "boolean"
-      }
-    },
-    "margin": {
-      "defaultValue": null,
-      "description": "If `dense` or `normal`, will adjust vertical spacing of this and contained components.",
-      "name": "margin",
-      "parent": {
-        "fileName": "material-ui-pickers/node_modules/@material-ui/core/TextField/TextField.d.ts",
-        "name": "BaseTextFieldProps"
-      },
-      "required": false,
-      "type": {
-        "name": "\"none\" | \"dense\" | \"normal\""
-      }
-    },
-    "required": {
-      "defaultValue": null,
-      "description": "If `true`, the label is displayed as required and the `input` element will be required.",
-      "name": "required",
-      "parent": {
-        "fileName": "material-ui-pickers/node_modules/@material-ui/core/TextField/TextField.d.ts",
-        "name": "BaseTextFieldProps"
-      },
-      "required": false,
-      "type": {
-        "name": "boolean"
-      }
-    },
-    "size": {
-      "defaultValue": null,
-      "description": "The size of the text field.",
-      "name": "size",
-      "parent": {
-        "fileName": "material-ui-pickers/node_modules/@material-ui/core/TextField/TextField.d.ts",
-        "name": "BaseTextFieldProps"
-      },
-      "required": false,
-      "type": {
-        "name": "\"small\" | \"medium\""
-      }
-    },
-    "defaultValue": {
-      "defaultValue": null,
-      "description": "The default value of the `input` element.",
-      "name": "defaultValue",
-      "parent": {
-        "fileName": "material-ui-pickers/node_modules/@material-ui/core/TextField/TextField.d.ts",
-        "name": "BaseTextFieldProps"
-      },
-      "required": false,
-      "type": {
-        "name": "unknown"
-      }
-    },
-    "id": {
-      "defaultValue": null,
-      "description": "The id of the `input` element.\nUse this prop to make `label` and `helperText` accessible for screen readers.",
-      "name": "id",
-      "parent": {
-        "fileName": "material-ui-pickers/node_modules/@material-ui/core/TextField/TextField.d.ts",
-        "name": "BaseTextFieldProps"
-      },
-      "required": false,
-      "type": {
-        "name": "string"
-      }
-    },
-    "placeholder": {
-      "defaultValue": null,
-      "description": "The short hint displayed in the input before the user enters a value.",
-      "name": "placeholder",
-      "parent": {
-        "fileName": "material-ui-pickers/node_modules/@material-ui/core/TextField/TextField.d.ts",
-        "name": "BaseTextFieldProps"
-      },
-      "required": false,
-      "type": {
-        "name": "string"
-      }
-    },
-    "autoComplete": {
-      "defaultValue": null,
-      "description": "This prop helps users to fill forms faster, especially on mobile devices.\nThe name can be confusing, as it's more like an autofill.\nYou can learn more about it [following the specification](https://html.spec.whatwg.org/multipage/form-control-infrastructure.html#autofill).",
-      "name": "autoComplete",
-      "parent": {
-        "fileName": "material-ui-pickers/node_modules/@material-ui/core/TextField/TextField.d.ts",
-        "name": "BaseTextFieldProps"
-      },
-      "required": false,
-      "type": {
-        "name": "string"
-      }
-    },
-    "autoFocus": {
-      "defaultValue": null,
-      "description": "If `true`, the `input` element will be focused during the first mount.",
-      "name": "autoFocus",
-      "parent": {
-        "fileName": "material-ui-pickers/node_modules/@material-ui/core/TextField/TextField.d.ts",
-        "name": "BaseTextFieldProps"
-      },
-      "required": false,
-      "type": {
-        "name": "boolean"
-      }
-    },
-    "FormHelperTextProps": {
-      "defaultValue": null,
-      "description": "Props applied to the [`FormHelperText`](/api/form-helper-text/) element.",
-      "name": "FormHelperTextProps",
-      "parent": {
-        "fileName": "material-ui-pickers/node_modules/@material-ui/core/TextField/TextField.d.ts",
-        "name": "BaseTextFieldProps"
-      },
-      "required": false,
-      "type": {
-        "name": "Partial<OverrideProps<FormHelperTextTypeMap<{}, \"p\">, \"p\">>"
-      }
-    },
-    "helperText": {
-      "defaultValue": null,
-      "description": "The helper text content.",
-      "name": "helperText",
-      "parent": {
-        "fileName": "material-ui-pickers/node_modules/@material-ui/core/TextField/TextField.d.ts",
-        "name": "BaseTextFieldProps"
-      },
-      "required": false,
-      "type": {
-        "name": "ReactNode"
-      }
-    },
-    "InputLabelProps": {
-      "defaultValue": null,
-      "description": "Props applied to the [`InputLabel`](/api/input-label/) element.",
-      "name": "InputLabelProps",
-      "parent": {
-        "fileName": "material-ui-pickers/node_modules/@material-ui/core/TextField/TextField.d.ts",
-        "name": "BaseTextFieldProps"
-      },
-      "required": false,
-      "type": {
-        "name": "Partial<InputLabelProps>"
-      }
-    },
-    "inputRef": {
-      "defaultValue": null,
-      "description": "Pass a ref to the `input` element.",
-      "name": "inputRef",
-      "parent": {
-        "fileName": "material-ui-pickers/node_modules/@material-ui/core/TextField/TextField.d.ts",
-        "name": "BaseTextFieldProps"
-      },
-      "required": false,
-      "type": {
-        "name": "(instance: any) => void"
-      }
-    },
-    "multiline": {
-      "defaultValue": null,
-      "description": "If `true`, a textarea element will be rendered instead of an input.",
-      "name": "multiline",
-      "parent": {
-        "fileName": "material-ui-pickers/node_modules/@material-ui/core/TextField/TextField.d.ts",
-        "name": "BaseTextFieldProps"
-      },
-      "required": false,
-      "type": {
-        "name": "boolean"
-      }
-    },
-    "name": {
-      "defaultValue": null,
-      "description": "Name attribute of the `input` element.",
-      "name": "name",
-      "parent": {
-        "fileName": "material-ui-pickers/node_modules/@material-ui/core/TextField/TextField.d.ts",
-        "name": "BaseTextFieldProps"
-      },
-      "required": false,
-      "type": {
-        "name": "string"
-      }
-    },
-    "rows": {
-      "defaultValue": null,
-      "description": "Number of rows to display when multiline option is set to true.",
-      "name": "rows",
-      "parent": {
-        "fileName": "material-ui-pickers/node_modules/@material-ui/core/TextField/TextField.d.ts",
-        "name": "BaseTextFieldProps"
-      },
-      "required": false,
-      "type": {
-        "name": "string | number"
-      }
-    },
-    "rowsMax": {
-      "defaultValue": null,
-      "description": "Maximum number of rows to display when multiline option is set to true.",
-      "name": "rowsMax",
-      "parent": {
-        "fileName": "material-ui-pickers/node_modules/@material-ui/core/TextField/TextField.d.ts",
-        "name": "BaseTextFieldProps"
-      },
-      "required": false,
-      "type": {
-        "name": "string | number"
-      }
-    },
-    "SelectProps": {
-      "defaultValue": null,
-      "description": "Props applied to the [`Select`](/api/select/) element.",
-      "name": "SelectProps",
-      "parent": {
-        "fileName": "material-ui-pickers/node_modules/@material-ui/core/TextField/TextField.d.ts",
-        "name": "BaseTextFieldProps"
-      },
-      "required": false,
-      "type": {
-        "name": "Partial<SelectProps>"
-      }
-    },
-    "type": {
-      "defaultValue": null,
-      "description": "Type of the `input` element. It should be [a valid HTML5 input type](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input#Form_%3Cinput%3E_types).",
-      "name": "type",
-      "parent": {
-        "fileName": "material-ui-pickers/node_modules/@material-ui/core/TextField/TextField.d.ts",
-        "name": "BaseTextFieldProps"
       },
       "required": false,
       "type": {
@@ -5138,7 +3324,7 @@
       },
       "required": false,
       "type": {
-        "name": "\"filled\" | \"standard\" | \"outlined\""
+        "name": "\"standard\" | \"outlined\" | \"filled\""
       }
     },
     "TextFieldComponent": {
@@ -5207,7 +3393,7 @@
       },
       "required": false,
       "type": {
-        "name": "{Partial<InputAdornmentProps>}"
+        "name": "Partial<InputAdornmentProps>"
       }
     },
     "KeyboardButtonProps": {
@@ -5220,7 +3406,7 @@
       },
       "required": false,
       "type": {
-        "name": "{Partial<IconButtonProps>}"
+        "name": "Partial<IconButtonProps>"
       }
     },
     "rifmFormatter": {
@@ -5498,7 +3684,7 @@
       },
       "required": false,
       "type": {
-        "name": "{Partial<IconButtonProps>}"
+        "name": "Partial<IconButtonProps>"
       }
     },
     "rightArrowButtonProps": {
@@ -5511,7 +3697,7 @@
       },
       "required": false,
       "type": {
-        "name": "{Partial<IconButtonProps>}"
+        "name": "Partial<IconButtonProps>"
       }
     },
     "shouldDisableDate": {
@@ -5583,7 +3769,7 @@
     },
     "minDate": {
       "defaultValue": {
-        "value": "new Date('1900-01-01')"
+        "value": null
       },
       "description": "Min date",
       "name": "minDate",
@@ -5598,7 +3784,7 @@
     },
     "maxDate": {
       "defaultValue": {
-        "value": "new Date('2100-01-01')"
+        "value": null
       },
       "description": "Max date",
       "name": "maxDate",
@@ -5705,7 +3891,7 @@
       },
       "required": false,
       "type": {
-        "name": "{Partial<IconButtonProps>}"
+        "name": "Partial<IconButtonProps>"
       }
     },
     "rightArrowButtonProps": {
@@ -5718,7 +3904,7 @@
       },
       "required": false,
       "type": {
-        "name": "{Partial<IconButtonProps>}"
+        "name": "Partial<IconButtonProps>"
       }
     },
     "shouldDisableDate": {
