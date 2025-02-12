@@ -1,19 +1,7 @@
-import * as PropTypes from 'prop-types';
 import { BaseTimePickerProps } from '../TimePicker/TimePicker';
 import { BaseDatePickerProps } from '../DatePicker/DatePicker';
 
-const date = PropTypes.oneOfType([
-  PropTypes.object,
-  PropTypes.string,
-  PropTypes.number,
-  PropTypes.instanceOf(Date),
-]);
-
-const datePickerView = PropTypes.oneOf(['year', 'month', 'day']);
-
 export type ParsableDate = object | string | number | Date | null | undefined;
-
-export const DomainPropTypes = { date, datePickerView };
 
 /* eslint-disable @typescript-eslint/no-object-literal-type-assertion */
 export const timePickerDefaultProps = {
