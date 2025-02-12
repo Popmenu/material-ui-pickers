@@ -7,7 +7,7 @@ import { useParsedDate } from '../_shared/hooks/date-helpers-hooks';
 import { withDateAdapterProp } from '../_shared/withDateAdapterProp';
 import { makeWrapperComponent } from '../wrappers/makeWrapperComponent';
 import { ResponsiveTooltipWrapper } from '../wrappers/ResponsiveWrapper';
-import { defaultMinDate, defaultMaxDate, date } from '../constants/prop-types';
+import { defaultMinDate, defaultMaxDate } from '../constants/prop-types';
 import { DesktopTooltipWrapper } from '../wrappers/DesktopTooltipWrapper';
 import { SomeWrapper, ExtendWrapper, StaticWrapper } from '../wrappers/Wrapper';
 import { RangeInput, AllSharedDateRangePickerProps, DateRange } from './RangeTypes';
@@ -144,7 +144,14 @@ export function makeRangePicker<TWrapper extends SomeWrapper>(
   }
 
   RangePickerWithStateAndWrapper.propTypes = {
-    value: PropTypes.arrayOf(date).isRequired,
+    value: PropTypes.arrayOf(
+      PropTypes.oneOfType([
+        PropTypes.object,
+        PropTypes.string,
+        PropTypes.number,
+        PropTypes.instanceOf(Date),
+      ]),
+    ).isRequired,
     onChange: PropTypes.func.isRequired,
     startText: PropTypes.node,
     endText: PropTypes.node,
