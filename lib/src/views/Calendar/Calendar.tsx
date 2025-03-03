@@ -271,7 +271,7 @@ export class Calendar extends React.Component<CalendarProps, CalendarState> {
           hidden={!isDayInCurrentMonth}
           selected={utils.isSameDay(selectedDate, day)}
         >
-          {utils.getDayText(day)}
+          {utils.format(day, 'dayOfMonth')}
         </Day>
       );
 

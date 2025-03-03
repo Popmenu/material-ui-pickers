@@ -21,9 +21,7 @@ describe('e2e - DatePicker default year format', () => {
   });
 
   it('Should use year format by default for year only view', () => {
-    expect(component.find('input').props().value).toBe(
-      utilsToUse.format(date, utilsToUse.yearFormat)
-    );
+    expect(component.find('input').props().value).toBe(utilsToUse.format(date, 'year'));
   });
 });
 
@@ -39,9 +37,7 @@ describe('e2e - DatePicker default year month format', () => {
   });
 
   it('Should use year month format by default for year & month views', () => {
-    expect(component.find('input').props().value).toBe(
-      utilsToUse.format(date, utilsToUse.yearMonthFormat)
-    );
+    expect(component.find('input').props().value).toBe(utilsToUse.format(date, 'monthAndYear'));
   });
 });
 
@@ -57,9 +53,7 @@ describe('e2e - DatePicker default year month day format', () => {
   });
 
   it('Should use default for year & month & day views', () => {
-    expect(component.find('input').props().value).toBe(
-      utilsToUse.format(date, utilsToUse.dateFormat)
-    );
+    expect(component.find('input').props().value).toBe(utilsToUse.format(date, 'fullDate'));
   });
 });
 

@@ -4,4 +4,4 @@ import { Omit } from '../_helpers/utils';
  * certain `classes`, on which one can also set a top-level `className` and inline
  * `style`.
  */
-export declare type ExtendMui<C, Removals extends keyof C = never> = Omit<C, 'classes' | 'theme' | Removals>;
+export type ExtendMui<C, Removals extends keyof C = never> = Omit<C, 'classes' | 'theme' | Removals>;

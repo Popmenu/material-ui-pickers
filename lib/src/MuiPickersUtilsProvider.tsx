@@ -1,35 +1,25 @@
 import * as React from 'react';
 import * as PropTypes from 'prop-types';
-import { IUtils } from '@date-io/core/IUtils';
-import { MaterialUiPickersDate } from './typings/date';
+import { Utils } from './typings/date';
 
-export const MuiPickersContext = React.createContext<IUtils<MaterialUiPickersDate> | null>(null);
+export const MuiPickersContext = React.createContext<Utils | null>(null);
 
 export interface MuiPickersUtilsProviderProps {
-  utils: any;
+  utils: Utils;
   children: React.ReactNode;
-  locale?: any;
-  libInstance?: any;
 }
 
 export const MuiPickersUtilsProvider: React.FC<MuiPickersUtilsProviderProps> = ({
-  utils: Utils,
+  utils,
   children,
-  locale,
-  libInstance,
 }) => {
-  const utils = React.useMemo(() => new Utils({ locale, instance: libInstance }), [
-    Utils,
-    libInstance,
-    locale,
-  ]);
-
   return <MuiPickersContext.Provider value={utils} children={children} />;
 };
 
+// @ts-ignore
 MuiPickersUtilsProvider.propTypes = {
-  utils: PropTypes.func.isRequired,
-  locale: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
+  // @ts-expect-error
+  utils: PropTypes.object.isRequired,
   children: PropTypes.oneOfType([
     PropTypes.element.isRequired,
     PropTypes.arrayOf(PropTypes.element.isRequired),

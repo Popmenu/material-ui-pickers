@@ -1,8 +1,7 @@
 import { useUtils } from './useUtils';
 import { Omit } from '../../_helpers/utils';
-import { IUtils } from '@date-io/core/IUtils';
 import { BasePickerProps } from '../../typings/BasePicker';
-import { MaterialUiPickersDate } from '../../typings/date';
+import { MaterialUiPickersDate, Utils } from '../../typings/date';
 import { useCallback, useEffect, useMemo, useState } from 'react';
 import { getDisplayDate } from '../../_helpers/text-field-helper';
 import { StateHookOptions, usePickerState } from './usePickerState';
@@ -14,7 +13,7 @@ export interface BaseKeyboardPickerProps extends Omit<BasePickerProps, 'onChange
   onChange: (date: MaterialUiPickersDate | null, value?: string | null) => void;
 }
 
-function parseInputString(value: string, utils: IUtils<any>, format: string) {
+function parseInputString(value: string, utils: Utils, format: string) {
   try {
     return utils.parse(value, format);
   } catch {
@@ -38,7 +37,7 @@ export function useKeyboardPickerState(props: BaseKeyboardPickerProps, options: 
 
   const handleKeyboardChange = useCallback(
     (date: MaterialUiPickersDate) => {
-      onChange(date, date === null ? null : utils.format(date, format));
+      onChange(date, date === null ? null : utils.formatByString(date, format));
     },
     [format, onChange, utils]
   );

@@ -1,9 +1,11 @@
 import * as React from 'react';
+import { YearProps } from '../views/Year/Year';
+import { TimePickerProps } from '../TimePicker';
 import { BasePickerProps } from '../typings/BasePicker';
-import { Picker, ToolbarComponentProps } from './Picker';
 import { ExtendWrapper, Wrapper } from '../wrappers/Wrapper';
 import { PureDateInputProps } from '../_shared/PureDateInput';
 import { DateValidationProps } from '../_helpers/text-field-helper';
+import { Picker, PickerProps, ToolbarComponentProps } from './Picker';
 import { KeyboardDateInputProps } from '../_shared/KeyboardDateInput';
 import { StateHookOptions, usePickerState } from '../_shared/hooks/usePickerState';
 import {
@@ -27,7 +29,7 @@ export interface MakePickerOptions<T extends any> {
   DefaultToolbarComponent: React.ComponentType<ToolbarComponentProps>;
 }
 
-export function makePickerWithState<T extends any>({
+export function makePickerWithState<T extends BasePickerProps>({
   Input,
   useState,
   useOptions,
@@ -79,7 +81,11 @@ export function makePickerWithState<T extends any>({
       variant,
       views,
       ...other
-    } = props;
+    } = (props as unknown) as PickerProps &
+      TimePickerProps &
+      ToolbarComponentProps &
+      DateValidationProps &
+      YearProps;
 
     const injectedProps = getCustomProps ? getCustomProps(props) : {};
 

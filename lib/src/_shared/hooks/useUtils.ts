@@ -1,9 +1,8 @@
 import { useContext } from 'react';
-import { IUtils } from '@date-io/core/IUtils';
-import { MaterialUiPickersDate } from '../../typings/date';
+import { Utils } from '../../typings/date';
 import { MuiPickersContext } from '../../MuiPickersUtilsProvider';
 
-export const checkUtils = (utils: IUtils<MaterialUiPickersDate> | null | undefined) => {
+export const checkUtils = (utils: Utils | null | undefined) => {
   if (!utils) {
     // tslint:disable-next-line
     throw new Error(

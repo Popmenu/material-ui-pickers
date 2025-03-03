@@ -1,12 +1,9 @@
 import * as React from 'react';
-import { IUtils } from '@date-io/core/IUtils';
-import { MaterialUiPickersDate } from './typings/date';
-export declare const MuiPickersContext: React.Context<IUtils<MaterialUiPickersDate> | null>;
+import { Utils } from './typings/date';
+export declare const MuiPickersContext: React.Context<Utils | null>;
 export interface MuiPickersUtilsProviderProps {
-    utils: any;
+    utils: Utils;
     children: React.ReactNode;
-    locale?: any;
-    libInstance?: any;
 }
 export declare const MuiPickersUtilsProvider: React.FC<MuiPickersUtilsProviderProps>;
 export default MuiPickersUtilsProvider;

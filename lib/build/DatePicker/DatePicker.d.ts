@@ -1,10 +1,8 @@
-/// <reference types="react" />
-/// <reference types="styled-jsx" />
 import { MaterialUiPickersDate } from '../typings/date';
 import { OutterCalendarProps } from '../views/Calendar/Calendar';
 import { ParsableDate } from '../constants/prop-types';
 import { WithKeyboardInputProps, WithPureInputProps } from '../Picker/makePickerWithState';
-export declare type DatePickerView = 'year' | 'date' | 'month';
+export type DatePickerView = 'year' | 'date' | 'month';
 export interface BaseDatePickerProps extends OutterCalendarProps {
     /**
      * Min selectable date
@@ -48,7 +46,7 @@ export interface DatePickerViewsProps extends BaseDatePickerProps {
     /** First view to show in DatePicker */
     openTo?: DatePickerView;
 }
-export declare type DatePickerProps = WithPureInputProps & DatePickerViewsProps;
-export declare type KeyboardDatePickerProps = WithKeyboardInputProps & DatePickerViewsProps;
+export type DatePickerProps = WithPureInputProps & DatePickerViewsProps;
+export type KeyboardDatePickerProps = WithKeyboardInputProps & DatePickerViewsProps;
 export declare const DatePicker: import("react").FC<DatePickerProps>;
 export declare const KeyboardDatePicker: import("react").FC<KeyboardDatePickerProps>;

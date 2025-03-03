@@ -17,13 +17,15 @@ export declare class Clock extends React.Component<ClockProps> {
     };
     isMoving: boolean;
     setTime(e: any, isFinish?: boolean): void;
-    handleTouchMove: (e: React.TouchEvent<Element>) => void;
-    handleTouchEnd: (e: React.TouchEvent<Element>) => void;
-    handleMove: (e: React.MouseEvent<HTMLDivElement, MouseEvent>) => void;
-    handleMouseUp: (e: React.MouseEvent<Element, MouseEvent>) => void;
+    handleTouchMove: (e: React.TouchEvent) => void;
+    handleTouchEnd: (e: React.TouchEvent) => void;
+    handleMove: (e: React.MouseEvent<HTMLDivElement>) => void;
+    handleMouseUp: (e: React.MouseEvent) => void;
     hasSelected: () => boolean;
     render(): JSX.Element;
 }
-export declare const styles: (theme: Theme) => Record<"container" | "clock" | "squareMask" | "pin", import("@material-ui/core/styles/withStyles").CSSProperties | import("@material-ui/core/styles/withStyles").CreateCSSProperties<{}> | ((props: {}) => import("@material-ui/core/styles/withStyles").CreateCSSProperties<{}>)>;
-declare const _default: React.ComponentType<(Pick<ClockProps, "children" | "value" | "onChange" | "type" | "ampm" | "minutesStep"> & import("@material-ui/core/styles").StyledComponentProps<"container" | "clock" | "squareMask" | "pin">) | (Pick<React.PropsWithChildren<ClockProps>, "children" | "value" | "onChange" | "type" | "ampm" | "minutesStep"> & import("@material-ui/core/styles").StyledComponentProps<"container" | "clock" | "squareMask" | "pin">)>;
+export declare const styles: (theme: Theme) => import("@material-ui/styles").StyleRules<{}, "container" | "clock" | "squareMask" | "pin">;
+declare const _default: React.ComponentType<(Pick<ClockProps, "children" | "value" | "onChange" | "type" | "ampm" | "minutesStep"> | Pick<ClockProps & {
+    children?: React.ReactNode;
+}, "children" | "value" | "onChange" | "type" | "ampm" | "minutesStep">) & import("@material-ui/core/styles").StyledComponentProps<"container" | "clock" | "squareMask" | "pin">>;
 export default _default;

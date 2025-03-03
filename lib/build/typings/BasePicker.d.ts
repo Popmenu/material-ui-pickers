@@ -1,4 +1,3 @@
-/// <reference types="react" />
 import { MaterialUiPickersDate } from './date';
 import { WrapperVariant } from '../wrappers/Wrapper';
 import { ParsableDate } from '../constants/prop-types';

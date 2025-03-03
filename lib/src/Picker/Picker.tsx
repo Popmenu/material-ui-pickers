@@ -51,7 +51,7 @@ export interface PickerViewProps extends BaseDatePickerProps, BaseTimePickerProp
   timeIcon?: React.ReactNode;
 }
 
-interface PickerProps extends PickerViewProps {
+export interface PickerProps extends PickerViewProps {
   date: MaterialUiPickersDate;
   orientation?: BasePickerProps['orientation'];
   onChange: (date: MaterialUiPickersDate, isFinish?: boolean) => void;

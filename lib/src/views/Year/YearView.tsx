@@ -40,7 +40,7 @@ export const YearSelection: React.FC<YearSelectionProps> = ({
   const utils = useUtils();
   const classes = useStyles();
   const currentVariant = React.useContext(VariantContext);
-  const selectedYearRef = React.useRef<HTMLDivElement>(null);
+  const selectedYearRef = React.useRef<HTMLDivElement | null>(null);
 
   React.useEffect(() => {
     if (selectedYearRef.current && selectedYearRef.current.scrollIntoView) {
@@ -73,11 +73,12 @@ export const YearSelection: React.FC<YearSelectionProps> = ({
     <div className={classes.container}>
       {utils.getYearRange(minDate, maxDate).map(year => {
         const yearNumber = utils.getYear(year);
+        let yearText = utils.format(year, 'year');
         const selected = yearNumber === currentYear;
 
         return (
           <Year
-            key={utils.getYearText(year)}
+            key={yearText}
             selected={selected}
             value={yearNumber}
             onSelect={onYearSelect}
@@ -87,7 +88,7 @@ export const YearSelection: React.FC<YearSelectionProps> = ({
                 (disableFuture && utils.isAfterYear(year, utils.date()))
             )}
           >
-            {utils.getYearText(year)}
+            {yearText}
           </Year>
         );
       })}

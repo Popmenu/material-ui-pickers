@@ -9,12 +9,9 @@ export interface ClockPointerProps extends WithStyles<typeof styles> {
     type: ClockViewType;
 }
 export declare class ClockPointer extends React.Component<ClockPointerProps> {
-    static getDerivedStateFromProps: (nextProps: ClockPointerProps, state: {
+    static getDerivedStateFromProps: (nextProps: ClockPointerProps, state: ClockPointer["state"]) => {
         toAnimateTransform: boolean;
-        previousType: undefined;
-    }) => {
-        toAnimateTransform: boolean;
-        previousType: "hours" | "minutes" | "seconds";
+        previousType: ClockViewType;
     };
     state: {
         toAnimateTransform: boolean;
@@ -26,6 +23,8 @@ export declare class ClockPointer extends React.Component<ClockPointerProps> {
     };
     render(): JSX.Element;
 }
-export declare const styles: (theme: Theme) => Record<"animateTransform" | "pointer" | "thumb" | "noPoint", import("@material-ui/core/styles/withStyles").CSSProperties | import("@material-ui/core/styles/withStyles").CreateCSSProperties<{}> | ((props: {}) => import("@material-ui/core/styles/withStyles").CreateCSSProperties<{}>)>;
-declare const _default: React.ComponentType<(Pick<ClockPointerProps, "value" | "type" | "hasSelected" | "isInner"> & import("@material-ui/core/styles").StyledComponentProps<"animateTransform" | "pointer" | "thumb" | "noPoint">) | (Pick<React.PropsWithChildren<ClockPointerProps>, "children" | "value" | "type" | "hasSelected" | "isInner"> & import("@material-ui/core/styles").StyledComponentProps<"animateTransform" | "pointer" | "thumb" | "noPoint">)>;
+export declare const styles: (theme: Theme) => import("@material-ui/styles").StyleRules<{}, "animateTransform" | "pointer" | "thumb" | "noPoint">;
+declare const _default: React.ComponentType<(Pick<ClockPointerProps, "value" | "type" | "hasSelected" | "isInner"> | Pick<ClockPointerProps & {
+    children?: React.ReactNode;
+}, "children" | "value" | "type" | "hasSelected" | "isInner">) & import("@material-ui/core/styles").StyledComponentProps<"animateTransform" | "pointer" | "thumb" | "noPoint">>;
 export default _default;

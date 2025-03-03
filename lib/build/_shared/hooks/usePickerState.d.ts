@@ -1,13 +1,11 @@
-/// <reference types="react" />
-/// <reference types="styled-jsx" />
-import { MaterialUiPickersDate } from '../../typings/date';
 import { BasePickerProps } from '../../typings/BasePicker';
+import { MaterialUiPickersDate } from '../../typings/date';
 export interface StateHookOptions {
     getDefaultFormat: () => string;
 }
 export declare function usePickerState(props: BasePickerProps, options: StateHookOptions): {
     pickerProps: {
-        date: MaterialUiPickersDate;
+        date: import("moment").Moment | import("luxon").DateTime | Date | null;
         onChange: (newDate: MaterialUiPickersDate, isFinish?: boolean) => void;
     };
     inputProps: {

@@ -52,6 +52,7 @@ ToolbarButton.defaultProps = {
   className: '',
 };
 
+// @ts-ignore
 export const styles = createStyles({
   toolbarBtn: {
     padding: 0,

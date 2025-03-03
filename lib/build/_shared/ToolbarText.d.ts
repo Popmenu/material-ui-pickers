@@ -5,6 +5,6 @@ export interface ToolbarTextProps extends ExtendMui<TypographyProps> {
     selected?: boolean;
     label: string;
 }
-export declare const useStyles: (props?: any) => Record<"toolbarTxt" | "toolbarBtnSelected", string>;
+export declare const useStyles: (props?: any) => import("@material-ui/styles").ClassNameMap<"toolbarTxt" | "toolbarBtnSelected">;
 declare const ToolbarText: React.FunctionComponent<ToolbarTextProps>;
 export default ToolbarText;

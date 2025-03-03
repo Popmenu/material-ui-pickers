@@ -1,8 +1,7 @@
 import { useUtils } from './useUtils';
-import { IUtils } from '@date-io/core/IUtils';
 import { useOpenState } from './useOpenState';
-import { MaterialUiPickersDate } from '../../typings/date';
 import { BasePickerProps } from '../../typings/BasePicker';
+import { MaterialUiPickersDate, Utils } from '../../typings/date';
 import { getDisplayDate, validate } from '../../_helpers/text-field-helper';
 import { useCallback, useDebugValue, useEffect, useMemo, useState, useRef } from 'react';
 
@@ -10,10 +9,7 @@ export interface StateHookOptions {
   getDefaultFormat: () => string;
 }
 
-const useValueToDate = (
-  utils: IUtils<MaterialUiPickersDate>,
-  { value, initialFocusedDate }: BasePickerProps
-) => {
+const useValueToDate = (utils: Utils, { value, initialFocusedDate }: BasePickerProps) => {
   const nowRef = useRef(utils.date());
   const date = utils.date(value || initialFocusedDate || nowRef.current);
 

@@ -1,11 +1,10 @@
 import { arrayIncludes } from './utils';
-import { IUtils } from '@date-io/core/IUtils';
-import { MaterialUiPickersDate } from '../typings/date';
 import { DatePickerView } from '../DatePicker/DatePicker';
+import { MaterialUiPickersDate, Utils } from '../typings/date';
 
 interface FindClosestDateParams {
   date: MaterialUiPickersDate;
-  utils: IUtils<MaterialUiPickersDate>;
+  utils: Utils;
   minDate: MaterialUiPickersDate;
   maxDate: MaterialUiPickersDate;
   disableFuture: boolean;
@@ -80,14 +79,14 @@ export const isYearOnlyView = (views: DatePickerView[]) =>
 export const isYearAndMonthViews = (views: DatePickerView[]) =>
   views.length === 2 && arrayIncludes(views, 'month') && arrayIncludes(views, 'year');
 
-export const getFormatByViews = (views: DatePickerView[], utils: IUtils<MaterialUiPickersDate>) => {
+export const getFormatByViews = (views: DatePickerView[], utils: Utils) => {
   if (isYearOnlyView(views)) {
-    return utils.yearFormat;
+    return utils.formats.year;
   }
 
   if (isYearAndMonthViews(views)) {
-    return utils.yearMonthFormat;
+    return utils.formats.monthAndYear;
   }
 
-  return utils.dateFormat;
+  return utils.formats.fullDate;
 };

@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { BaseTextFieldProps, TextFieldProps } from '@material-ui/core/TextField';
 import { ExtendMui } from '../typings/extendMui';
-export declare type NotOverridableProps = 'openPicker' | 'inputValue' | 'onChange' | 'format' | 'validationError' | 'format' | 'forwardedRef';
+export type NotOverridableProps = 'openPicker' | 'inputValue' | 'onChange' | 'format' | 'validationError' | 'format' | 'forwardedRef';
 export interface PureDateInputProps extends ExtendMui<BaseTextFieldProps, 'variant' | 'onError' | 'value'> {
     /** Pass material-ui text field variant down, bypass internal variant prop */
     inputVariant?: TextFieldProps['variant'];

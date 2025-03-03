@@ -4,6 +4,7 @@ import LuxonUtils from '@date-io/luxon';
 import MomentUtils from '@date-io/moment';
 import DateFnsUtils from '@date-io/date-fns';
 import MuiPickersUtilsProvider from '../MuiPickersUtilsProvider';
+import { Utils } from '../typings/date';
 import { WithUtilsProps } from '../_shared/WithUtils';
 
 const getUtilClass = () => {
@@ -20,7 +21,7 @@ const getUtilClass = () => {
 };
 
 export const UtilClassToUse: any = getUtilClass();
-export const utilsToUse = new UtilClassToUse();
+export const utilsToUse = new UtilClassToUse() as Utils;
 
 const getComponentWithUtils = <P extends WithUtilsProps>(element: React.ReactElement<P>) =>
   React.cloneElement(element, { utils: utilsToUse } as any);
@@ -29,7 +30,7 @@ export const shallow = <P extends WithUtilsProps>(element: React.ReactElement<P>
   enzyme.shallow(getComponentWithUtils(element));
 
 export const mount = <P extends WithUtilsProps>(element: React.ReactElement<P>) =>
-  enzyme.mount(<MuiPickersUtilsProvider utils={UtilClassToUse}>{element}</MuiPickersUtilsProvider>);
+  enzyme.mount(<MuiPickersUtilsProvider utils={utilsToUse}>{element}</MuiPickersUtilsProvider>);
 
 export const shallowRender = (render: (props: any) => React.ReactElement<any>) => {
   return enzyme.shallow(render({ utils: utilsToUse, classes: {} as any, theme: {} as any }));

@@ -55,7 +55,7 @@ export interface CalendarState {
     loadingQueue: number;
 }
 export declare class Calendar extends React.Component<CalendarProps, CalendarState> {
-    static contextType: React.Context<"dialog" | "inline" | "static" | null>;
+    static contextType: React.Context<import("../../wrappers/Wrapper").WrapperVariant | null>;
     static propTypes: any;
     static defaultProps: Partial<CalendarProps>;
     static getDerivedStateFromProps(nextProps: CalendarProps, state: CalendarState): {
@@ -96,5 +96,7 @@ export declare const styles: (theme: Theme) => {
         justifyContent: string;
     };
 };
-declare const _default: React.ComponentType<Pick<React.PropsWithChildren<Pick<CalendarProps, "classes" | "theme" | "onChange" | "date" | "onMonthChange" | "leftArrowIcon" | "rightArrowIcon" | "leftArrowButtonProps" | "rightArrowButtonProps" | "minDate" | "maxDate" | "disablePast" | "disableFuture" | "renderDay" | "allowKeyboardControl" | "shouldDisableDate" | "loadingIndicator">>, "children" | "onChange" | "date" | "onMonthChange" | "leftArrowIcon" | "rightArrowIcon" | "leftArrowButtonProps" | "rightArrowButtonProps" | "minDate" | "maxDate" | "disablePast" | "disableFuture" | "renderDay" | "allowKeyboardControl" | "shouldDisableDate" | "loadingIndicator"> & import("@material-ui/core/styles").StyledComponentProps<"transitionContainer" | "progressContainer" | "week">>;
+declare const _default: React.ComponentType<Pick<import("../../_helpers/utils").Omit<CalendarProps, "utils"> & {
+    children?: React.ReactNode;
+}, "children" | "onChange" | "date" | "onMonthChange" | "leftArrowIcon" | "rightArrowIcon" | "leftArrowButtonProps" | "rightArrowButtonProps" | "minDate" | "maxDate" | "disablePast" | "disableFuture" | "renderDay" | "allowKeyboardControl" | "shouldDisableDate" | "loadingIndicator"> & import("@material-ui/core/styles").StyledComponentProps<"transitionContainer" | "progressContainer" | "week">>;
 export default _default;

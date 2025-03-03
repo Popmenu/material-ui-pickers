@@ -1,11 +1,10 @@
 import * as React from 'react';
 import { Omit } from '../_helpers/utils';
 import { useUtils } from './hooks/useUtils';
-import { IUtils } from '@date-io/core/IUtils';
-import { MaterialUiPickersDate } from '../typings/date';
+import { Utils } from '../typings/date';
 
 export interface WithUtilsProps {
-  utils: IUtils<MaterialUiPickersDate>;
+  utils: Utils;
 }
 
 export const withUtils = () => <P extends WithUtilsProps>(Component: React.ComponentType<P>) => {

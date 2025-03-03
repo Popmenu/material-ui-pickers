@@ -1,13 +1,13 @@
 import { Omit } from './utils';
 import { DatePickerProps } from '..';
-import { IUtils } from '@date-io/core/IUtils';
+import { Utils } from '../typings/date';
 import { ParsableDate } from '../constants/prop-types';
 import { BasePickerProps } from '../typings/BasePicker';
 
 export const getDisplayDate = (
   value: ParsableDate,
   format: string,
-  utils: IUtils<any>,
+  utils: Utils,
   isEmpty: boolean,
   { invalidLabel, emptyLabel, labelFunc }: Omit<BasePickerProps, 'value' | 'onChange'>
 ) => {
@@ -20,7 +20,7 @@ export const getDisplayDate = (
     return emptyLabel || '';
   }
 
-  return utils.isValid(date) ? utils.format(date, format) : invalidLabel!;
+  return utils.isValid(date) ? utils.formatByString(date, format) : invalidLabel!;
 };
 
 export interface BaseValidationProps {
@@ -44,7 +44,7 @@ export interface DateValidationProps extends BaseValidationProps {
   maxDateMessage?: React.ReactNode;
 }
 
-const getComparisonMaxDate = (utils: IUtils<any>, strictCompareDates: boolean, date: Date) => {
+const getComparisonMaxDate = (utils: Utils, strictCompareDates: boolean, date: Date) => {
   if (strictCompareDates) {
     return date;
   }
@@ -52,7 +52,7 @@ const getComparisonMaxDate = (utils: IUtils<any>, strictCompareDates: boolean, d
   return utils.endOfDay(date);
 };
 
-const getComparisonMinDate = (utils: IUtils<any>, strictCompareDates: boolean, date: Date) => {
+const getComparisonMinDate = (utils: Utils, strictCompareDates: boolean, date: Date) => {
   if (strictCompareDates) {
     return date;
   }
@@ -62,7 +62,7 @@ const getComparisonMinDate = (utils: IUtils<any>, strictCompareDates: boolean, d
 
 export const validate = (
   value: ParsableDate,
-  utils: IUtils<any>,
+  utils: Utils,
   {
     maxDate,
     minDate,
@@ -125,12 +125,12 @@ export function pick12hOr24hFormat(
   userFormat: string | undefined,
   ampm: boolean | undefined = true,
   formats: { '12h': string; '24h': string }
-) {
+): string {
   if (userFormat) {
     return userFormat;
   }
 
-  return ampm ? formats['12h'] : formats['24h'];
+  return userFormat || (ampm ? formats['12h'] : formats['24h']);
 }
 
 export function makeMaskFromFormat(format: string, numberMaskChar: string) {

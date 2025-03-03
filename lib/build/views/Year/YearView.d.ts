@@ -11,5 +11,5 @@ export interface YearSelectionProps {
     animateYearScrolling?: boolean | null | undefined;
     onYearChange?: (date: MaterialUiPickersDate) => void;
 }
-export declare const useStyles: (props?: any) => Record<"container", string>;
+export declare const useStyles: (props?: any) => import("@material-ui/styles").ClassNameMap<"container">;
 export declare const YearSelection: React.FC<YearSelectionProps>;

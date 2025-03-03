@@ -1,4 +1,3 @@
-import { useUtils } from '../_shared/hooks/useUtils';
 import { TimePickerToolbar } from './TimePickerToolbar';
 import { PureDateInput } from '../_shared/PureDateInput';
 import { KeyboardDateInput } from '../_shared/KeyboardDateInput';
@@ -45,13 +44,11 @@ const defaultProps = {
 };
 
 function useOptions(props: TimePickerProps | KeyboardTimePickerProps) {
-  const utils = useUtils();
-
   return {
     getDefaultFormat: () =>
       pick12hOr24hFormat(props.format, props.ampm, {
-        '12h': utils.time12hFormat,
-        '24h': utils.time24hFormat,
+        '12h': 'fullTime12h',
+        '24h': 'fullTime24h',
       }),
   };
 }

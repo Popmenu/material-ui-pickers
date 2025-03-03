@@ -1,5 +1,3 @@
-/// <reference types="react" />
-/// <reference types="styled-jsx" />
 import { ParsableDate } from '../../constants/prop-types';
 import { MaterialUiPickersDate } from '../../typings/date';
 import { BaseDatePickerProps } from '../../DatePicker/DatePicker';
@@ -11,7 +9,7 @@ interface StaticStateOpts extends BaseDatePickerProps {
 }
 export declare function useStaticState({ value, autoOk, onChange, defaultFormat }: StaticStateOpts): {
     pickerProps: {
-        date: MaterialUiPickersDate;
+        date: import("moment").Moment | import("luxon").DateTime | Date | null;
         onChange: (newDate: MaterialUiPickersDate, isFinish?: boolean) => void;
     };
     wrapperProps: {

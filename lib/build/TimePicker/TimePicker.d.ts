@@ -1,5 +1,3 @@
-/// <reference types="react" />
-/// <reference types="styled-jsx" />
 import { WithKeyboardInputProps, WithPureInputProps } from '../Picker/makePickerWithState';
 export interface BaseTimePickerProps {
     /**
@@ -19,7 +17,7 @@ export interface TimePickerViewsProps extends BaseTimePickerProps {
     /** First view to show in timepicker */
     openTo?: 'hours' | 'minutes' | 'seconds';
 }
-export declare type TimePickerProps = WithPureInputProps & TimePickerViewsProps;
-export declare type KeyboardTimePickerProps = WithKeyboardInputProps & TimePickerViewsProps;
+export type TimePickerProps = WithPureInputProps & TimePickerViewsProps;
+export type KeyboardTimePickerProps = WithKeyboardInputProps & TimePickerViewsProps;
 export declare const TimePicker: import("react").FC<TimePickerProps>;
 export declare const KeyboardTimePicker: import("react").FC<KeyboardTimePickerProps>;

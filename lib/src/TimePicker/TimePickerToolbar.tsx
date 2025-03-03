@@ -111,7 +111,7 @@ export const TimePickerToolbar: React.FC<ToolbarComponentProps> = ({
             variant={clockTypographyVariant}
             onClick={() => setOpenView(ClockType.HOURS)}
             selected={openView === ClockType.HOURS}
-            label={utils.getHourText(date, Boolean(ampm))}
+            label={utils.format(date, ampm ? 'hours12h' : 'hours24h')}
           />
         )}
 
@@ -129,7 +129,7 @@ export const TimePickerToolbar: React.FC<ToolbarComponentProps> = ({
             variant={clockTypographyVariant}
             onClick={() => setOpenView(ClockType.MINUTES)}
             selected={openView === ClockType.MINUTES}
-            label={utils.getMinuteText(date)}
+            label={utils.format(date, 'minutes')}
           />
         )}
 
@@ -142,7 +142,7 @@ export const TimePickerToolbar: React.FC<ToolbarComponentProps> = ({
             variant="h2"
             onClick={() => setOpenView(ClockType.SECONDS)}
             selected={openView === ClockType.SECONDS}
-            label={utils.getSecondText(date)}
+            label={utils.format(date, 'seconds')}
           />
         )}
       </div>

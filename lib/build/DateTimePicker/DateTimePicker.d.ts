@@ -1,10 +1,8 @@
-/// <reference types="react" />
-/// <reference types="styled-jsx" />
 import { BaseTimePickerProps } from '../TimePicker/TimePicker';
 import { BaseDatePickerProps } from '../DatePicker/DatePicker';
 import { WithKeyboardInputProps, WithPureInputProps } from '../Picker/makePickerWithState';
-export declare type DateTimePickerView = 'year' | 'date' | 'month' | 'hours' | 'minutes';
-export declare type BaseDateTimePickerProps = BaseTimePickerProps & BaseDatePickerProps;
+export type DateTimePickerView = 'year' | 'date' | 'month' | 'hours' | 'minutes';
+export type BaseDateTimePickerProps = BaseTimePickerProps & BaseDatePickerProps;
 export interface DateTimePickerViewsProps extends BaseDateTimePickerProps {
     /** Array of views to show */
     views?: ('year' | 'date' | 'month' | 'hours' | 'minutes')[];
@@ -17,7 +15,7 @@ export interface DateTimePickerViewsProps extends BaseDateTimePickerProps {
     /** Time tab icon */
     timeIcon?: React.ReactNode;
 }
-export declare type DateTimePickerProps = WithPureInputProps & DateTimePickerViewsProps;
-export declare type KeyboardDateTimePickerProps = WithKeyboardInputProps & DateTimePickerViewsProps;
+export type DateTimePickerProps = WithPureInputProps & DateTimePickerViewsProps;
+export type KeyboardDateTimePickerProps = WithKeyboardInputProps & DateTimePickerViewsProps;
 export declare const DateTimePicker: import("react").FC<DateTimePickerProps>;
 export declare const KeyboardDateTimePicker: import("react").FC<KeyboardDateTimePickerProps>;

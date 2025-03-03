@@ -1,7 +1,7 @@
 import * as React from 'react';
-import { IUtils } from '@date-io/core/IUtils';
-import { MaterialUiPickersDate } from '../typings/date';
+import { Omit } from '../_helpers/utils';
+import { Utils } from '../typings/date';
 export interface WithUtilsProps {
-    utils: IUtils<MaterialUiPickersDate>;
+    utils: Utils;
 }
-export declare const withUtils: () => <P extends WithUtilsProps>(Component: React.ComponentType<P>) => React.SFC<Pick<P, Exclude<keyof P, "utils">>>;
+export declare const withUtils: () => <P extends WithUtilsProps>(Component: React.ComponentType<P>) => React.SFC<Omit<P, "utils">>;

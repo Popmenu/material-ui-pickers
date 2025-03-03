@@ -6,6 +6,6 @@ export interface MonthProps {
     selected?: boolean;
     value: any;
 }
-export declare const useStyles: (props?: any) => Record<"root" | "monthSelected" | "monthDisabled", string>;
+export declare const useStyles: (props?: any) => import("@material-ui/styles").ClassNameMap<"root" | "monthSelected" | "monthDisabled">;
 export declare const Month: React.FC<MonthProps>;
 export default Month;

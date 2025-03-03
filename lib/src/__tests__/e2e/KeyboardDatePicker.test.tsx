@@ -1,5 +1,5 @@
 import * as React from 'react';
-import addDays from 'date-fns/addDays';
+import { addDays } from 'date-fns';
 import { ReactWrapper } from 'enzyme';
 import { mount } from '../test-utils';
 import { KeyboardDatePicker, KeyboardDatePickerProps } from '../../DatePicker/DatePicker';

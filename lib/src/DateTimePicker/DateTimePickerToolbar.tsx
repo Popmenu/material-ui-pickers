@@ -52,7 +52,7 @@ export const DateTimePickerToolbar: React.FC<ToolbarComponentProps> = ({
                 variant="subtitle1"
                 onClick={() => setOpenView('year')}
                 selected={openView === 'year'}
-                label={utils.getYearText(date)}
+                label={utils.format(date, 'year')}
               />
             </div>
             <div>
@@ -60,7 +60,7 @@ export const DateTimePickerToolbar: React.FC<ToolbarComponentProps> = ({
                 variant="h4"
                 onClick={() => setOpenView('date')}
                 selected={openView === 'date'}
-                label={utils.getDateTimePickerHeaderText(date)}
+                label={utils.format(date, 'normalDateWithWeekday')}
               />
             </div>
           </Grid>
@@ -77,7 +77,7 @@ export const DateTimePickerToolbar: React.FC<ToolbarComponentProps> = ({
               variant="h3"
               onClick={() => setOpenView('hours')}
               selected={openView === 'hours'}
-              label={utils.getHourText(date, ampm!)}
+              label={utils.format(date, ampm ? 'hours12h' : 'hours24h')}
             />
 
             <ToolbarText variant="h3" label=":" className={classes.separator} />
@@ -86,7 +86,7 @@ export const DateTimePickerToolbar: React.FC<ToolbarComponentProps> = ({
               variant="h3"
               onClick={() => setOpenView('minutes')}
               selected={openView === 'minutes'}
-              label={utils.getMinuteText(date)}
+              label={utils.format(date, 'minutes')}
             />
           </Grid>
 

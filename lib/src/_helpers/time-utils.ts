@@ -1,5 +1,4 @@
-import { IUtils } from '@date-io/core/IUtils';
-import { MaterialUiPickersDate } from '../typings/date';
+import { MaterialUiPickersDate, Utils } from '../typings/date';
 
 const center = {
   x: 260 / 2,
@@ -57,10 +56,7 @@ export const getMinutes = (offsetX: number, offsetY: number, step = 1) => {
   return value;
 };
 
-export const getMeridiem = (
-  date: MaterialUiPickersDate,
-  utils: IUtils<MaterialUiPickersDate>
-): 'am' | 'pm' => {
+export const getMeridiem = (date: MaterialUiPickersDate, utils: Utils): 'am' | 'pm' => {
   return utils.getHours(date) >= 12 ? 'pm' : 'am';
 };
 
@@ -68,7 +64,7 @@ export const convertToMeridiem = (
   time: MaterialUiPickersDate,
   meridiem: 'am' | 'pm',
   ampm: boolean,
-  utils: IUtils<MaterialUiPickersDate>
+  utils: Utils
 ) => {
   if (ampm) {
     const currentMeridiem = utils.getHours(time) >= 12 ? 'pm' : 'am';

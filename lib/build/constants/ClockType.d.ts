@@ -3,5 +3,5 @@ declare enum ClockType {
     MINUTES = "minutes",
     SECONDS = "seconds"
 }
-export declare type ClockViewType = 'hours' | 'minutes' | 'seconds';
+export type ClockViewType = 'hours' | 'minutes' | 'seconds';
 export default ClockType;
