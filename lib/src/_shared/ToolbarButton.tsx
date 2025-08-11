@@ -19,7 +19,7 @@ export interface ToolbarButtonProps
 
 const ToolbarButton: React.FunctionComponent<ToolbarButtonProps> = ({
   classes,
-  className = null,
+  className = '',
   label,
   selected,
   variant,
@@ -40,16 +40,12 @@ const ToolbarButton: React.FunctionComponent<ToolbarButtonProps> = ({
   );
 };
 
-(ToolbarButton as any).propTypes = {
+ToolbarButton.propTypes = {
   selected: PropTypes.bool.isRequired,
   label: PropTypes.string.isRequired,
   classes: PropTypes.any.isRequired,
   className: PropTypes.string,
   innerRef: PropTypes.any,
-};
-
-ToolbarButton.defaultProps = {
-  className: '',
 };
 
 export const styles = createStyles({

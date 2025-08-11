@@ -41,7 +41,7 @@ export type ToolbarComponentProps = BaseDatePickerProps &
   };
 
 export interface PickerViewProps extends BaseDatePickerProps, BaseTimePickerProps {
-  views: PickerView[];
+  views?: PickerView[];
   openTo: PickerView;
   disableToolbar?: boolean;
   ToolbarComponent: React.ComponentType<ToolbarComponentProps>;
@@ -82,91 +82,95 @@ const useStyles = makeStyles(
   { name: 'MuiPickersBasePicker' }
 );
 
-export const Picker: React.FunctionComponent<PickerProps> = ({
-  date,
-  views,
-  disableToolbar,
-  onChange,
-  openTo,
-  minDate: unparsedMinDate,
-  maxDate: unparsedMaxDate,
-  ToolbarComponent,
-  orientation,
-  ...rest
-}) => {
-  const utils = useUtils();
-  const classes = useStyles();
-  const isLandscape = useIsLandscape(orientation);
-  const { openView, setOpenView, handleChangeAndOpenNext } = useViews(views, openTo, onChange);
+export class Picker extends React.Component<PickerProps> {
+  static defaultProps = {
+    ...datePickerDefaultProps,
+    views: Object.keys(viewsMap),
+  };
 
-  const minDate = React.useMemo(() => utils.date(unparsedMinDate)!, [unparsedMinDate, utils]);
-  const maxDate = React.useMemo(() => utils.date(unparsedMaxDate)!, [unparsedMaxDate, utils]);
+  render() {
+    let {
+      date,
+      views,
+      disableToolbar,
+      onChange,
+      openTo,
+      minDate: unparsedMinDate,
+      maxDate: unparsedMaxDate,
+      ToolbarComponent,
+      orientation,
+      ...rest
+    } = this.props;
+    const utils = useUtils();
+    const classes = useStyles();
+    const isLandscape = useIsLandscape(orientation);
+    // views are defined thanks to default props
+    const { openView, setOpenView, handleChangeAndOpenNext } = useViews(views!, openTo, onChange);
 
-  return (
-    <div
-      className={clsx(classes.container, {
-        [classes.containerLandscape]: isLandscape,
-      })}
-    >
-      {!disableToolbar && (
-        <ToolbarComponent
-          {...rest}
-          views={views}
-          isLandscape={isLandscape}
-          date={date}
-          onChange={onChange}
-          setOpenView={setOpenView}
-          openView={openView}
-        />
-      )}
+    const minDate = React.useMemo(() => utils.date(unparsedMinDate)!, [unparsedMinDate, utils]);
+    const maxDate = React.useMemo(() => utils.date(unparsedMaxDate)!, [unparsedMaxDate, utils]);
 
-      <div className={clsx(classes.pickerView, { [classes.pickerViewLandscape]: isLandscape })}>
-        {openView === 'year' && (
-          <YearSelection
+    return (
+      <div
+        className={clsx(classes.container, {
+          [classes.containerLandscape]: isLandscape,
+        })}
+      >
+        {!disableToolbar && (
+          <ToolbarComponent
             {...rest}
+            views={views!}
+            isLandscape={isLandscape}
             date={date}
-            onChange={handleChangeAndOpenNext}
-            minDate={minDate}
-            maxDate={maxDate}
+            onChange={onChange}
+            setOpenView={setOpenView}
+            openView={openView}
           />
         )}
 
-        {openView === 'month' && (
-          <MonthSelection
-            {...rest}
-            date={date}
-            onChange={handleChangeAndOpenNext}
-            minDate={minDate}
-            maxDate={maxDate}
-          />
-        )}
+        <div className={clsx(classes.pickerView, { [classes.pickerViewLandscape]: isLandscape })}>
+          {openView === 'year' && (
+            <YearSelection
+              {...rest}
+              date={date}
+              onChange={handleChangeAndOpenNext}
+              minDate={minDate}
+              maxDate={maxDate}
+            />
+          )}
 
-        {openView === 'date' && (
-          <Calendar
-            {...rest}
-            date={date}
-            onChange={handleChangeAndOpenNext}
-            minDate={minDate}
-            maxDate={maxDate}
-          />
-        )}
+          {openView === 'month' && (
+            <MonthSelection
+              {...rest}
+              date={date}
+              onChange={handleChangeAndOpenNext}
+              minDate={minDate}
+              maxDate={maxDate}
+            />
+          )}
 
-        {(openView === 'hours' || openView === 'minutes' || openView === 'seconds') && (
-          <ClockView
-            {...rest}
-            date={date}
-            type={openView}
-            onHourChange={handleChangeAndOpenNext}
-            onMinutesChange={handleChangeAndOpenNext}
-            onSecondsChange={handleChangeAndOpenNext}
-          />
-        )}
+          {openView === 'date' && (
+            <Calendar
+              {...rest}
+              date={date}
+              onChange={handleChangeAndOpenNext}
+              minDate={minDate}
+              maxDate={maxDate}
+            />
+          )}
+
+          {(openView === 'hours' || openView === 'minutes' || openView === 'seconds') && (
+            <ClockView
+              {...rest}
+              date={date}
+              type={openView}
+              onHourChange={handleChangeAndOpenNext}
+              onMinutesChange={handleChangeAndOpenNext}
+              onSecondsChange={handleChangeAndOpenNext}
+            />
+          )}
+        </div>
       </div>
-    </div>
-  );
-};
-
-Picker.defaultProps = {
-  ...datePickerDefaultProps,
-  views: Object.keys(viewsMap),
-} as any;
+    );
+  }
+}

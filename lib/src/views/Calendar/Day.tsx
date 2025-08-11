@@ -55,10 +55,10 @@ export interface DayProps {
 
 export const Day: React.FC<DayProps> = ({
   children,
-  disabled,
-  hidden,
-  current,
-  selected,
+  disabled = false,
+  hidden = false,
+  current = false,
+  selected = false,
   ...other
 }) => {
   const classes = useStyles();
@@ -86,13 +86,6 @@ Day.propTypes = {
   disabled: PropTypes.bool,
   hidden: PropTypes.bool,
   selected: PropTypes.bool,
-};
-
-Day.defaultProps = {
-  disabled: false,
-  hidden: false,
-  current: false,
-  selected: false,
 };
 
 export default Day;

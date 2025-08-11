@@ -29,9 +29,9 @@ export const ClockView: React.FC<TimePickerViewProps> = ({
   onHourChange,
   onMinutesChange,
   onSecondsChange,
-  ampm,
+  ampm = true,
   date,
-  minutesStep,
+  minutesStep = 1,
 }) => {
   const utils = useUtils();
   const viewProps = React.useMemo(() => {
@@ -97,10 +97,5 @@ ClockView.propTypes = {
   type: PropTypes.oneOf(Object.keys(ClockType).map(key => ClockType[key as keyof typeof ClockType]))
     .isRequired,
 } as any;
-
-ClockView.defaultProps = {
-  ampm: true,
-  minutesStep: 1,
-};
 
 export default React.memo(ClockView);

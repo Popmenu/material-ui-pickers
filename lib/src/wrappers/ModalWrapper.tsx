@@ -47,12 +47,12 @@ export interface ModalWrapperProps<T = {}> extends WrapperProps<T> {
 export const ModalWrapper: React.FC<ModalWrapperProps<any>> = ({
   open,
   children,
-  okLabel,
-  cancelLabel,
-  clearLabel,
-  todayLabel,
-  showTodayButton,
-  clearable,
+  okLabel = 'OK',
+  cancelLabel = 'Cancel',
+  clearLabel = 'Clear',
+  todayLabel = 'Today',
+  showTodayButton = false,
+  clearable = false,
   DialogProps,
   showTabs,
   wider,
@@ -102,12 +102,3 @@ ModalWrapper.propTypes = {
   showTodayButton: PropTypes.bool,
   DialogProps: PropTypes.object,
 } as any;
-
-ModalWrapper.defaultProps = {
-  okLabel: 'OK',
-  cancelLabel: 'Cancel',
-  clearLabel: 'Clear',
-  todayLabel: 'Today',
-  clearable: false,
-  showTodayButton: false,
-};
