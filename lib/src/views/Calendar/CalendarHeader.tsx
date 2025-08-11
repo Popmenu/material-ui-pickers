@@ -95,9 +95,11 @@ export const CalendarHeader: React.FC<CalendarHeaderProps> = ({
           transKey={currentMonth.toString()}
           className={classes.transitionContainer}
         >
-          <Typography align="center" variant="body1">
-            {utils.getCalendarHeaderText(currentMonth)}
-          </Typography>
+          {nodeRef => (
+            <Typography ref={nodeRef} align="center" variant="body1">
+              {utils.getCalendarHeaderText(currentMonth)}
+            </Typography>
+          )}
         </SlideTransition>
 
         <IconButton

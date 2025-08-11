@@ -329,11 +329,15 @@ export class Calendar extends React.Component<CalendarProps, CalendarState> {
           transKey={currentMonth!.toString()}
           className={classes.transitionContainer}
         >
-          <>
-            {(this.state.loadingQueue > 0 && (
-              <div className={classes.progressContainer}>{loadingElement}</div>
-            )) || <div>{this.renderWeeks()}</div>}
-          </>
+          {nodeRef =>
+            this.state.loadingQueue > 0 ? (
+              <div ref={nodeRef} className={classes.progressContainer}>
+                {loadingElement}
+              </div>
+            ) : (
+              <div ref={nodeRef}>{this.renderWeeks()}</div>
+            )
+          }
         </SlideTransition>
       </React.Fragment>
     );

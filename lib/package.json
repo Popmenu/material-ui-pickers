@@ -42,7 +42,7 @@
     "@date-io/core": "1.x",
     "@types/styled-jsx": "^2.2.8",
     "clsx": "^1.0.2",
-    "react-transition-group": "^4.0.0",
+    "react-transition-group": "^4.4.0",
     "rifm": "^0.7.0"
   },
   "size-limit": [
@@ -90,7 +90,7 @@
     "@types/prop-types": "^15.5.8",
     "@types/react": "^16.8.2",
     "@types/react-dom": "^16.8.0",
-    "@types/react-transition-group": "^2.0.15",
+    "@types/react-transition-group": "^4.4.12",
     "@typescript-eslint/eslint-plugin": "^1.6.0",
     "@typescript-eslint/parser": "^1.6.0",
     "babel-plugin-optimize-clsx": "^2.3.0",
