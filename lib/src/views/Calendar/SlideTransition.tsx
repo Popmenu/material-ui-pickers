@@ -8,7 +8,7 @@ interface SlideTransitionProps {
   transKey: React.Key;
   className?: string;
   slideDirection: SlideDirection;
-  children: React.ReactChild;
+  children: (nodeRef: React.MutableRefObject<any>) => React.ReactChild;
 }
 
 const animationDuration = 350;
@@ -75,6 +75,7 @@ const SlideTransition: React.SFC<SlideTransitionProps> = ({
     // @ts-ignore
     exitActive: classes['slideExitActiveLeft-' + slideDirection],
   };
+  const nodeRef = React.useRef(null);
 
   return (
     <TransitionGroup
@@ -91,6 +92,7 @@ const SlideTransition: React.SFC<SlideTransitionProps> = ({
         key={transKey + slideDirection}
         timeout={animationDuration}
         classNames={transitionClasses}
+        nodeRef={nodeRef}
         children={children}
       />
     </TransitionGroup>
