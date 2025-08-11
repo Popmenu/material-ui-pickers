@@ -47,11 +47,14 @@ export const useStyles = makeStyles(
   { name: 'MuiPickerDTTabs' }
 );
 
-export const DateTimePickerTabs: React.SFC<DateTimePickerTabsProps> = ({
+const defaultDateRangeIcon = <DateRangeIcon />;
+const defaultTimeIcon = <TimeIcon />;
+
+export const DateTimePickerTabs: React.FC<DateTimePickerTabsProps> = ({
   view,
   onChange,
-  dateRangeIcon,
-  timeIcon,
+  dateRangeIcon = defaultDateRangeIcon,
+  timeIcon = defaultTimeIcon,
 }) => {
   const classes = useStyles();
   const theme = useTheme();
@@ -76,11 +79,6 @@ export const DateTimePickerTabs: React.SFC<DateTimePickerTabsProps> = ({
       </Tabs>
     </Paper>
   );
-};
-
-DateTimePickerTabs.defaultProps = {
-  dateRangeIcon: <DateRangeIcon />,
-  timeIcon: <TimeIcon />,
 };
 
 export default DateTimePickerTabs;

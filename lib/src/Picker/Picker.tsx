@@ -82,7 +82,7 @@ const useStyles = makeStyles(
   { name: 'MuiPickersBasePicker' }
 );
 
-export const Picker: React.FunctionComponent<PickerProps> = ({
+const PickerImpl: React.FunctionComponent<PickerProps> = ({
   date,
   views,
   disableToolbar,
@@ -166,7 +166,13 @@ export const Picker: React.FunctionComponent<PickerProps> = ({
   );
 };
 
-Picker.defaultProps = {
-  ...datePickerDefaultProps,
-  views: Object.keys(viewsMap),
-} as any;
+export class Picker extends React.Component<PickerProps> {
+  static defaultProps = {
+    ...datePickerDefaultProps,
+    views: Object.keys(viewsMap),
+  };
+
+  render() {
+    return <PickerImpl {...this.props} />;
+  }
+}

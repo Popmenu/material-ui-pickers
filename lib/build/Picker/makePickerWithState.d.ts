@@ -16,4 +16,4 @@ export interface MakePickerOptions<T extends any> {
     getCustomProps?: (props: T) => Partial<T>;
     DefaultToolbarComponent: React.ComponentType<ToolbarComponentProps>;
 }
-export declare function makePickerWithState<T extends any>({ Input, useState, useOptions, getCustomProps, DefaultToolbarComponent, }: MakePickerOptions<T>): React.FC<T>;
+export declare function makePickerWithState<T extends any>({ Input, useState, useOptions, getCustomProps, DefaultToolbarComponent, }: MakePickerOptions<T>): React.ComponentType<T>;

@@ -33,8 +33,8 @@ export function makePickerWithState<T extends any>({
   useOptions,
   getCustomProps,
   DefaultToolbarComponent,
-}: MakePickerOptions<T>): React.FC<T> {
-  function PickerWithState(props: T) {
+}: MakePickerOptions<T>): React.ComponentType<T> {
+  function PickerWithStateImpl(props: T) {
     const {
       allowKeyboardControl,
       ampm,
@@ -126,6 +126,12 @@ export function makePickerWithState<T extends any>({
         />
       </Wrapper>
     );
+  }
+
+  class PickerWithState extends React.Component<T> {
+    render() {
+      return <PickerWithStateImpl {...this.props} />;
+    }
   }
 
   return PickerWithState;
