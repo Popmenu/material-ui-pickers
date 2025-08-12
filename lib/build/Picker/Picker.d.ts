@@ -24,7 +24,7 @@ export declare type ToolbarComponentProps = BaseDatePickerProps & BaseTimePicker
     isLandscape: boolean;
 };
 export interface PickerViewProps extends BaseDatePickerProps, BaseTimePickerProps {
-    views: PickerView[];
+    views?: PickerView[];
     openTo: PickerView;
     disableToolbar?: boolean;
     ToolbarComponent: React.ComponentType<ToolbarComponentProps>;
@@ -37,5 +37,26 @@ interface PickerProps extends PickerViewProps {
     orientation?: BasePickerProps['orientation'];
     onChange: (date: MaterialUiPickersDate, isFinish?: boolean) => void;
 }
-export declare const Picker: React.FunctionComponent<PickerProps>;
+export declare class Picker extends React.Component<PickerProps> {
+    static defaultProps: {
+        views: string[];
+        minDate?: import("../constants/prop-types").ParsableDate;
+        maxDate?: import("../constants/prop-types").ParsableDate;
+        strictCompareDates?: boolean | undefined;
+        disablePast?: boolean | undefined;
+        disableFuture?: boolean | undefined;
+        animateYearScrolling?: boolean | undefined;
+        onYearChange?: ((date: MaterialUiPickersDate) => void) | undefined;
+        leftArrowIcon?: React.ReactNode;
+        rightArrowIcon?: React.ReactNode;
+        renderDay?: ((day: MaterialUiPickersDate, selectedDate: MaterialUiPickersDate, dayInCurrentMonth: boolean, dayComponent: JSX.Element) => JSX.Element) | undefined;
+        allowKeyboardControl?: boolean | undefined;
+        leftArrowButtonProps?: Partial<import("@material-ui/core/OverridableComponent").OverrideProps<import("@material-ui/core").IconButtonTypeMap<{}, "button">, "button">> | undefined;
+        rightArrowButtonProps?: Partial<import("@material-ui/core/OverridableComponent").OverrideProps<import("@material-ui/core").IconButtonTypeMap<{}, "button">, "button">> | undefined;
+        shouldDisableDate?: ((day: MaterialUiPickersDate) => boolean) | undefined;
+        onMonthChange?: ((date: MaterialUiPickersDate) => void | Promise<void>) | undefined;
+        loadingIndicator?: JSX.Element | undefined;
+    };
+    render(): JSX.Element;
+}
 export {};

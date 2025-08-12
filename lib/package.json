@@ -61,8 +61,8 @@
     "build:copy": "node copy.js",
     "build:bundle": "rollup --config",
     "build:typescript": "tsc --project tsconfig.json",
-    "build": "npm run build:typescript && npm run build:bundle && npm run build:copy",
-    "build:analyze": "npm run build",
+    "build": "yarn run build:typescript && yarn run build:bundle && yarn run build:copy",
+    "build:analyze": "yarn run build",
     "release": "yarn test && yarn version && yarn build && yarn publish --non-interactive build"
   },
   "devDependencies": {

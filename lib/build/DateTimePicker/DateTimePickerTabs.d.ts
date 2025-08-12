@@ -7,5 +7,5 @@ export interface DateTimePickerTabsProps {
     timeIcon?: React.ReactNode;
 }
 export declare const useStyles: (props?: any) => Record<"tabs", string>;
-export declare const DateTimePickerTabs: React.SFC<DateTimePickerTabsProps>;
+export declare const DateTimePickerTabs: React.FC<DateTimePickerTabsProps>;
 export default DateTimePickerTabs;
