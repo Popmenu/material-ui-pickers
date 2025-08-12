@@ -108,10 +108,7 @@ describe('e2e - DatePicker inline variant', () => {
 
   it('Should dispatch onChange and close on day select', () => {
     component.find('input').simulate('click');
-    component
-      .find('Day button')
-      .at(10)
-      .simulate('click');
+    component.find('Day button').at(10).simulate('click');
 
     expect(onChangeMock).toHaveBeenCalled();
     expect(component.find('WithStyles(ForwardRef(Popover))').props().open).toBeFalsy();
@@ -128,16 +125,8 @@ describe('e2e - DatePicker without month change', () => {
   });
 
   it('Should not add to loading queue if callback is undefined', () => {
-    component
-      .find('CalendarHeader button')
-      .first()
-      .simulate('click');
-    expect(
-      component
-        .find('Calendar')
-        .first()
-        .state('loadingQueue')
-    ).toEqual(0);
+    component.find('CalendarHeader button').first().simulate('click');
+    expect(component.find('Calendar').first().state('loadingQueue')).toEqual(0);
   });
 });
 
@@ -154,16 +143,8 @@ describe('e2e - DatePicker month change sync', () => {
   });
 
   it('Should not add to loading queue when synchronous', () => {
-    component
-      .find('CalendarHeader button')
-      .first()
-      .simulate('click');
-    expect(
-      component
-        .find('Calendar')
-        .first()
-        .state('loadingQueue')
-    ).toEqual(0);
+    component.find('CalendarHeader button').first().simulate('click');
+    expect(component.find('Calendar').first().state('loadingQueue')).toEqual(0);
   });
 });
 
@@ -191,31 +172,15 @@ describe('e2e - DatePicker month change async', () => {
   });
 
   it('Should add to loading queue when loading asynchronous data', () => {
-    component
-      .find('CalendarHeader button')
-      .first()
-      .simulate('click');
+    component.find('CalendarHeader button').first().simulate('click');
 
-    expect(
-      component
-        .find('Calendar')
-        .first()
-        .state('loadingQueue')
-    ).toEqual(1);
+    expect(component.find('Calendar').first().state('loadingQueue')).toEqual(1);
   });
 
   it('Should empty loading queue after loading asynchronous data', async () => {
-    component
-      .find('CalendarHeader button')
-      .first()
-      .simulate('click');
+    component.find('CalendarHeader button').first().simulate('click');
     await sleep(100);
-    expect(
-      component
-        .find('Calendar')
-        .first()
-        .state('loadingQueue')
-    ).toEqual(0);
+    expect(component.find('Calendar').first().state('loadingQueue')).toEqual(0);
   });
 });
 

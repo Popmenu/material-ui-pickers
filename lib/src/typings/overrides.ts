@@ -24,12 +24,12 @@ type Classes<T> = Partial<
     T extends string
       ? T
       : T extends (props?: any) => ClassNameMap<infer C>
-      ? C
-      : T extends StyleRulesCallback<any, any, infer K>
-      ? K
-      : T extends StyleRules<infer D>
-      ? D
-      : never
+        ? C
+        : T extends StyleRulesCallback<any, any, infer K>
+          ? K
+          : T extends StyleRules<infer D>
+            ? D
+            : never
   >
 >;
 

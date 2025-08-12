@@ -43,7 +43,11 @@ export function useKeyboardPickerState(props: BaseKeyboardPickerProps, options: 
     [format, onChange, utils]
   );
 
-  const { inputProps: innerInputProps, wrapperProps, pickerProps } = usePickerState(
+  const {
+    inputProps: innerInputProps,
+    wrapperProps,
+    pickerProps,
+  } = usePickerState(
     // Extend props interface
     { ...props, value: dateValue, onChange: handleKeyboardChange },
     options
