@@ -24,7 +24,7 @@ export declare type ToolbarComponentProps = BaseDatePickerProps & BaseTimePicker
     isLandscape: boolean;
 };
 export interface PickerViewProps extends BaseDatePickerProps, BaseTimePickerProps {
-    views?: PickerView[];
+    views: PickerView[];
     openTo: PickerView;
     disableToolbar?: boolean;
     ToolbarComponent: React.ComponentType<ToolbarComponentProps>;

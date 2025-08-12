@@ -41,7 +41,7 @@ export type ToolbarComponentProps = BaseDatePickerProps &
   };
 
 export interface PickerViewProps extends BaseDatePickerProps, BaseTimePickerProps {
-  views?: PickerView[];
+  views: PickerView[];
   openTo: PickerView;
   disableToolbar?: boolean;
   ToolbarComponent: React.ComponentType<ToolbarComponentProps>;
@@ -82,6 +82,90 @@ const useStyles = makeStyles(
   { name: 'MuiPickersBasePicker' }
 );
 
+const PickerImpl: React.FunctionComponent<PickerProps> = ({
+  date,
+  views,
+  disableToolbar,
+  onChange,
+  openTo,
+  minDate: unparsedMinDate,
+  maxDate: unparsedMaxDate,
+  ToolbarComponent,
+  orientation,
+  ...rest
+}) => {
+  const utils = useUtils();
+  const classes = useStyles();
+  const isLandscape = useIsLandscape(orientation);
+  const { openView, setOpenView, handleChangeAndOpenNext } = useViews(views, openTo, onChange);
+
+  const minDate = React.useMemo(() => utils.date(unparsedMinDate)!, [unparsedMinDate, utils]);
+  const maxDate = React.useMemo(() => utils.date(unparsedMaxDate)!, [unparsedMaxDate, utils]);
+
+  return (
+    <div
+      className={clsx(classes.container, {
+        [classes.containerLandscape]: isLandscape,
+      })}
+    >
+      {!disableToolbar && (
+        <ToolbarComponent
+          {...rest}
+          views={views}
+          isLandscape={isLandscape}
+          date={date}
+          onChange={onChange}
+          setOpenView={setOpenView}
+          openView={openView}
+        />
+      )}
+
+      <div className={clsx(classes.pickerView, { [classes.pickerViewLandscape]: isLandscape })}>
+        {openView === 'year' && (
+          <YearSelection
+            {...rest}
+            date={date}
+            onChange={handleChangeAndOpenNext}
+            minDate={minDate}
+            maxDate={maxDate}
+          />
+        )}
+
+        {openView === 'month' && (
+          <MonthSelection
+            {...rest}
+            date={date}
+            onChange={handleChangeAndOpenNext}
+            minDate={minDate}
+            maxDate={maxDate}
+          />
+        )}
+
+        {openView === 'date' && (
+          <Calendar
+            {...rest}
+            date={date}
+            onChange={handleChangeAndOpenNext}
+            minDate={minDate}
+            maxDate={maxDate}
+          />
+        )}
+
+        {(openView === 'hours' || openView === 'minutes' || openView === 'seconds') && (
+          <ClockView
+            {...rest}
+            date={date}
+            type={openView}
+            onHourChange={handleChangeAndOpenNext}
+            onMinutesChange={handleChangeAndOpenNext}
+            onSecondsChange={handleChangeAndOpenNext}
+          />
+        )}
+      </div>
+    </div>
+  );
+};
+
 export class Picker extends React.Component<PickerProps> {
   static defaultProps = {
     ...datePickerDefaultProps,
@@ -89,88 +173,6 @@ export class Picker extends React.Component<PickerProps> {
   };
 
   render() {
-    let {
-      date,
-      views,
-      disableToolbar,
-      onChange,
-      openTo,
-      minDate: unparsedMinDate,
-      maxDate: unparsedMaxDate,
-      ToolbarComponent,
-      orientation,
-      ...rest
-    } = this.props;
-    const utils = useUtils();
-    const classes = useStyles();
-    const isLandscape = useIsLandscape(orientation);
-    // views are defined thanks to default props
-    const { openView, setOpenView, handleChangeAndOpenNext } = useViews(views!, openTo, onChange);
-
-    const minDate = React.useMemo(() => utils.date(unparsedMinDate)!, [unparsedMinDate, utils]);
-    const maxDate = React.useMemo(() => utils.date(unparsedMaxDate)!, [unparsedMaxDate, utils]);
-
-    return (
-      <div
-        className={clsx(classes.container, {
-          [classes.containerLandscape]: isLandscape,
-        })}
-      >
-        {!disableToolbar && (
-          <ToolbarComponent
-            {...rest}
-            views={views!}
-            isLandscape={isLandscape}
-            date={date}
-            onChange={onChange}
-            setOpenView={setOpenView}
-            openView={openView}
-          />
-        )}
-
-        <div className={clsx(classes.pickerView, { [classes.pickerViewLandscape]: isLandscape })}>
-          {openView === 'year' && (
-            <YearSelection
-              {...rest}
-              date={date}
-              onChange={handleChangeAndOpenNext}
-              minDate={minDate}
-              maxDate={maxDate}
-            />
-          )}
-
-          {openView === 'month' && (
-            <MonthSelection
-              {...rest}
-              date={date}
-              onChange={handleChangeAndOpenNext}
-              minDate={minDate}
-              maxDate={maxDate}
-            />
-          )}
-
-          {openView === 'date' && (
-            <Calendar
-              {...rest}
-              date={date}
-              onChange={handleChangeAndOpenNext}
-              minDate={minDate}
-              maxDate={maxDate}
-            />
-          )}
-
-          {(openView === 'hours' || openView === 'minutes' || openView === 'seconds') && (
-            <ClockView
-              {...rest}
-              date={date}
-              type={openView}
-              onHourChange={handleChangeAndOpenNext}
-              onMinutesChange={handleChangeAndOpenNext}
-              onSecondsChange={handleChangeAndOpenNext}
-            />
-          )}
-        </div>
-      </div>
-    );
+    return <PickerImpl {...this.props} />;
   }
 }
