@@ -1,11 +1,11 @@
 {
-  "build/dist/material-ui-pickers.esm.js": {
+  "material-ui-pickers.esm.js": {
     "bundled": 107274,
-    "minified": 60307,
-    "gzipped": 15823,
+    "minified": 60305,
+    "gzipped": 15825,
     "treeshaked": {
       "rollup": {
-        "code": 48573,
+        "code": 48537,
         "import_statements": 1709
       },
       "webpack": {
@@ -13,14 +13,14 @@
       }
     }
   },
-  "build/dist/material-ui-pickers.umd.js": {
+  "material-ui-pickers.umd.js": {
     "bundled": 220600,
-    "minified": 84368,
-    "gzipped": 24152
+    "minified": 84510,
+    "gzipped": 24107
   },
-  "build/dist/material-ui-pickers.umd.min.js": {
+  "material-ui-pickers.umd.min.js": {
     "bundled": 171228,
-    "minified": 72224,
-    "gzipped": 20841
+    "minified": 72326,
+    "gzipped": 20825
   }
 }
