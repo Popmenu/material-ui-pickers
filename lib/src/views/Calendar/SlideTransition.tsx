@@ -80,7 +80,7 @@ const SlideTransition: React.SFC<SlideTransitionProps> = ({
   return (
     <TransitionGroup
       className={clsx(classes.transitionContainer, className)}
-      childFactory={element =>
+      childFactory={(element: React.ReactElement) =>
         React.cloneElement(element, {
           classNames: transitionClasses,
         })
