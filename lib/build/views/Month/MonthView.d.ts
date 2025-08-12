@@ -10,5 +10,5 @@ export interface MonthSelectionProps {
     disableFuture?: boolean | null | undefined;
     onMonthChange?: (date: MaterialUiPickersDate) => void | Promise<void>;
 }
-export declare const useStyles: (props?: any) => Record<"container", string>;
+export declare const useStyles: (props?: any) => import("@material-ui/styles").ClassNameMap<"container">;
 export declare const MonthSelection: React.FC<MonthSelectionProps>;

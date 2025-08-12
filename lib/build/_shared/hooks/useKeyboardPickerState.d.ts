@@ -1,5 +1,3 @@
-/// <reference types="react" />
-/// <reference types="styled-jsx" />
 import { Omit } from '../../_helpers/utils';
 import { BasePickerProps } from '../../typings/BasePicker';
 import { MaterialUiPickersDate } from '../../typings/date';
@@ -27,7 +25,7 @@ export declare function useKeyboardPickerState(props: BaseKeyboardPickerProps, o
         onDismiss: () => void;
     };
     pickerProps: {
-        date: MaterialUiPickersDate;
+        date: import("moment").Moment | import("luxon").DateTime | Date | null;
         onChange: (newDate: MaterialUiPickersDate, isFinish?: boolean) => void;
     };
 };

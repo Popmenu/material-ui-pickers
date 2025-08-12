@@ -6,6 +6,6 @@ export interface DateTimePickerTabsProps {
     dateRangeIcon?: React.ReactNode;
     timeIcon?: React.ReactNode;
 }
-export declare const useStyles: (props?: any) => Record<"tabs", string>;
+export declare const useStyles: (props?: any) => import("@material-ui/styles").ClassNameMap<"tabs">;
 export declare const DateTimePickerTabs: React.FC<DateTimePickerTabsProps>;
 export default DateTimePickerTabs;

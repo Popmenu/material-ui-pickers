@@ -118,9 +118,8 @@
     "@rollup/plugin-terser": "^0.4.4",
     "size-limit": "^0.21.1",
     "ts-jest": "^24.0.1",
-    "ts-lib": "0.0.5",
     "tslint-config-prettier": "^1.18.0",
-    "typescript": "^3.3.3"
+    "typescript": "^5.9.2"
   },
   "jest": {
     "setupFilesAfterEnv": [

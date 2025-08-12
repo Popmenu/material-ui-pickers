@@ -18,7 +18,7 @@ import { useStyles as SlideTransitionStyles } from '../views/Calendar/SlideTrans
 import { useStyles as MuiPickersMonthSelectionStyles } from '../views/Month/MonthView';
 import { useStyles as MuiPickerDTToolbarStyles } from '../DateTimePicker/DateTimePickerToolbar';
 import { StyleRules, StyleRulesCallback, ClassNameMap } from '@material-ui/core/styles/withStyles';
-declare type Classes<T> = Partial<StyleRules<T extends string ? T : T extends (props?: any) => ClassNameMap<infer C> ? C : T extends StyleRulesCallback<any, any, infer K> ? K : T extends StyleRules<infer D> ? D : never>>;
+type Classes<T> = Partial<StyleRules<T extends string ? T : T extends (props?: any) => ClassNameMap<infer C> ? C : T extends StyleRulesCallback<any, any, infer K> ? K : T extends StyleRules<infer D> ? D : never>>;
 export interface MuiPickersOverrides {
     MuiPickersDay?: Classes<typeof DayStyles>;
     MuiPickerDTHeader?: Classes<typeof DTHeaderStyles>;

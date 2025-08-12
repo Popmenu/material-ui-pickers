@@ -10,7 +10,7 @@ interface FindClosestDateParams {
     disablePast: boolean;
     shouldDisableDate: (date: MaterialUiPickersDate) => boolean;
 }
-export declare const findClosestEnabledDate: ({ date, utils, minDate, maxDate, disableFuture, disablePast, shouldDisableDate, }: FindClosestDateParams) => MaterialUiPickersDate;
+export declare const findClosestEnabledDate: ({ date, utils, minDate, maxDate, disableFuture, disablePast, shouldDisableDate, }: FindClosestDateParams) => import("moment").Moment | import("luxon").DateTime | Date | null;
 export declare const isYearOnlyView: (views: DatePickerView[]) => boolean;
 export declare const isYearAndMonthViews: (views: DatePickerView[]) => boolean;
 export declare const getFormatByViews: (views: DatePickerView[], utils: IUtils<MaterialUiPickersDate>) => string;

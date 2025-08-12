@@ -6,13 +6,15 @@ import { BaseDatePickerProps } from '../DatePicker/DatePicker';
 declare const viewsMap: {
     year: React.FC<import("../views/Year/YearView").YearSelectionProps>;
     month: React.FC<import("../views/Month/MonthView").MonthSelectionProps>;
-    date: React.ComponentType<Pick<React.PropsWithChildren<Pick<import("../views/Calendar/Calendar").CalendarProps, "classes" | "theme" | "onChange" | "date" | "onMonthChange" | "leftArrowIcon" | "rightArrowIcon" | "leftArrowButtonProps" | "rightArrowButtonProps" | "minDate" | "maxDate" | "disablePast" | "disableFuture" | "renderDay" | "allowKeyboardControl" | "shouldDisableDate" | "loadingIndicator">>, "children" | "onChange" | "date" | "onMonthChange" | "leftArrowIcon" | "rightArrowIcon" | "leftArrowButtonProps" | "rightArrowButtonProps" | "minDate" | "maxDate" | "disablePast" | "disableFuture" | "renderDay" | "allowKeyboardControl" | "shouldDisableDate" | "loadingIndicator"> & import("@material-ui/core/styles").StyledComponentProps<"transitionContainer" | "progressContainer" | "week">>;
+    date: React.ComponentType<Pick<import("../_helpers/utils").Omit<import("../views/Calendar/Calendar").CalendarProps, "utils"> & {
+        children?: React.ReactNode;
+    }, "children" | "onChange" | "date" | "onMonthChange" | "leftArrowIcon" | "rightArrowIcon" | "leftArrowButtonProps" | "rightArrowButtonProps" | "minDate" | "maxDate" | "disablePast" | "disableFuture" | "renderDay" | "allowKeyboardControl" | "shouldDisableDate" | "loadingIndicator"> & import("@material-ui/core/styles").StyledComponentProps<"transitionContainer" | "progressContainer" | "week">>;
     hours: React.FC<import("../views/Clock/ClockView").TimePickerViewProps>;
     minutes: React.FC<import("../views/Clock/ClockView").TimePickerViewProps>;
     seconds: React.FC<import("../views/Clock/ClockView").TimePickerViewProps>;
 };
-export declare type PickerView = keyof typeof viewsMap;
-export declare type ToolbarComponentProps = BaseDatePickerProps & BaseTimePickerProps & {
+export type PickerView = keyof typeof viewsMap;
+export type ToolbarComponentProps = BaseDatePickerProps & BaseTimePickerProps & {
     views: PickerView[];
     openView: PickerView;
     date: MaterialUiPickersDate;
@@ -42,20 +44,20 @@ export declare class Picker extends React.Component<PickerProps> {
         views: string[];
         minDate?: import("../constants/prop-types").ParsableDate;
         maxDate?: import("../constants/prop-types").ParsableDate;
-        strictCompareDates?: boolean | undefined;
-        disablePast?: boolean | undefined;
-        disableFuture?: boolean | undefined;
-        animateYearScrolling?: boolean | undefined;
-        onYearChange?: ((date: MaterialUiPickersDate) => void) | undefined;
+        strictCompareDates?: boolean;
+        disablePast?: boolean;
+        disableFuture?: boolean;
+        animateYearScrolling?: boolean;
+        onYearChange?: (date: MaterialUiPickersDate) => void;
         leftArrowIcon?: React.ReactNode;
         rightArrowIcon?: React.ReactNode;
-        renderDay?: ((day: MaterialUiPickersDate, selectedDate: MaterialUiPickersDate, dayInCurrentMonth: boolean, dayComponent: JSX.Element) => JSX.Element) | undefined;
-        allowKeyboardControl?: boolean | undefined;
-        leftArrowButtonProps?: Partial<import("@material-ui/core/OverridableComponent").OverrideProps<import("@material-ui/core").IconButtonTypeMap<{}, "button">, "button">> | undefined;
-        rightArrowButtonProps?: Partial<import("@material-ui/core/OverridableComponent").OverrideProps<import("@material-ui/core").IconButtonTypeMap<{}, "button">, "button">> | undefined;
-        shouldDisableDate?: ((day: MaterialUiPickersDate) => boolean) | undefined;
-        onMonthChange?: ((date: MaterialUiPickersDate) => void | Promise<void>) | undefined;
-        loadingIndicator?: JSX.Element | undefined;
+        renderDay?: (day: MaterialUiPickersDate, selectedDate: MaterialUiPickersDate, dayInCurrentMonth: boolean, dayComponent: JSX.Element) => JSX.Element;
+        allowKeyboardControl?: boolean;
+        leftArrowButtonProps?: Partial<import("@material-ui/core").IconButtonProps>;
+        rightArrowButtonProps?: Partial<import("@material-ui/core").IconButtonProps>;
+        shouldDisableDate?: (day: MaterialUiPickersDate) => boolean;
+        onMonthChange?: (date: MaterialUiPickersDate) => void | Promise<void>;
+        loadingIndicator?: JSX.Element;
     };
     render(): JSX.Element;
 }

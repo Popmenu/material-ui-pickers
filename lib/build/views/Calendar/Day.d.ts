@@ -1,5 +1,5 @@
 import * as React from 'react';
-export declare const useStyles: (props?: any) => Record<"hidden" | "day" | "current" | "daySelected" | "dayDisabled", string>;
+export declare const useStyles: (props?: any) => import("@material-ui/styles").ClassNameMap<"hidden" | "current" | "day" | "daySelected" | "dayDisabled">;
 export interface DayProps {
     /** Day text */
     children: React.ReactNode;

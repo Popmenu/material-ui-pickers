@@ -14,6 +14,6 @@ export interface CalendarHeaderProps {
     slideDirection: SlideDirection;
     onMonthChange: (date: MaterialUiPickersDate, direction: SlideDirection) => void | Promise<void>;
 }
-export declare const useStyles: (props?: any) => Record<"transitionContainer" | "switchHeader" | "iconButton" | "daysHeader" | "dayLabel", string>;
+export declare const useStyles: (props?: any) => import("@material-ui/styles").ClassNameMap<"transitionContainer" | "switchHeader" | "iconButton" | "daysHeader" | "dayLabel">;
 export declare const CalendarHeader: React.FC<CalendarHeaderProps>;
 export default CalendarHeader;

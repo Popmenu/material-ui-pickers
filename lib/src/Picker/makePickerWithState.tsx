@@ -79,7 +79,7 @@ export function makePickerWithState<T extends any>({
       variant,
       views,
       ...other
-    } = props;
+    } = props as any;
 
     const injectedProps = getCustomProps ? getCustomProps(props) : {};
 
