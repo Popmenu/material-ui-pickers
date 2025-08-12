@@ -31,25 +31,16 @@ describe('e2e - DatePicker', () => {
   });
 
   it('Should dispatch onChange on day click', () => {
-    component
-      .find('Day button')
-      .at(2)
-      .simulate('click');
+    component.find('Day button').at(2).simulate('click');
     expect(onChangeMock).toHaveBeenCalled();
   });
 
   it('Should render year selection', () => {
-    component
-      .find('ToolbarButton')
-      .first()
-      .simulate('click');
+    component.find('ToolbarButton').first().simulate('click');
 
     expect(component.find('Year').length).toBe(201);
 
-    component
-      .find('Year')
-      .at(1)
-      .simulate('click');
+    component.find('Year').at(1).simulate('click');
 
     clickOKButton(component);
     expect(onChangeMock).toHaveBeenCalled();
@@ -77,10 +68,7 @@ describe('e2e -- DatePicker views year', () => {
   it('Should render year selection and select year', () => {
     expect(component.find('Year').length).toBe(201);
 
-    component
-      .find('Year')
-      .at(1)
-      .simulate('click');
+    component.find('Year').at(1).simulate('click');
 
     clickOKButton(component);
     expect(onYearChangeMock).toHaveBeenCalled();
@@ -109,19 +97,13 @@ describe('e2e -- DatePicker views year and month', () => {
 
   it('Should select month', () => {
     expect(component.find('Month').length).toBe(12);
-    component
-      .find('Month')
-      .first()
-      .simulate('click');
+    component.find('Month').first().simulate('click');
 
     expect(onMonthChangeMock).toHaveBeenCalled();
   });
 
   it('Should switch to year selection and back to month', () => {
-    component
-      .find('ToolbarButton')
-      .first()
-      .simulate('click');
+    component.find('ToolbarButton').first().simulate('click');
 
     const year = component.find('Year');
     expect(component.find('Year').length).toBe(201);

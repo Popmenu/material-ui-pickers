@@ -15,10 +15,7 @@ describe('Visual Regression', () => {
       withDarkTheme: true,
       scenarios: {
         'Opened datepicker': () => {
-          cy.get('[data-test-id=datepicker-example]')
-            .find('input')
-            .first()
-            .click({ force: true });
+          cy.get('[data-test-id=datepicker-example]').find('input').first().click({ force: true });
         },
       },
     },
@@ -28,9 +25,7 @@ describe('Visual Regression', () => {
       withDarkTheme: true,
       scenarios: {
         'Opened timepicker': () => {
-          cy.get('input')
-            .first()
-            .click({ force: true });
+          cy.get('input').first().click({ force: true });
         },
       },
     },
@@ -40,9 +35,7 @@ describe('Visual Regression', () => {
       withDarkTheme: true,
       scenarios: {
         'Opened datetimepicker': () => {
-          cy.get('input')
-            .first()
-            .click({ force: true });
+          cy.get('input').first().click({ force: true });
         },
       },
     },
@@ -51,9 +44,7 @@ describe('Visual Regression', () => {
       name: 'Css overrides',
       scenarios: {
         'Custom material-ui theme': () => {
-          cy.get('[data-test-id=css-override]')
-            .find('input')
-            .click({ force: true });
+          cy.get('[data-test-id=css-override]').find('input').click({ force: true });
         },
       },
     },

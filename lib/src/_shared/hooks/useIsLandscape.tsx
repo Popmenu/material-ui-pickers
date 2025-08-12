@@ -20,9 +20,8 @@ const getOrientation = () => {
 };
 
 export function useIsLandscape(customOrientation?: BasePickerProps['orientation']) {
-  const [orientation, setOrientation] = React.useState<BasePickerProps['orientation']>(
-    getOrientation()
-  );
+  const [orientation, setOrientation] =
+    React.useState<BasePickerProps['orientation']>(getOrientation());
 
   const eventHandler = React.useCallback(() => setOrientation(getOrientation()), []);
 

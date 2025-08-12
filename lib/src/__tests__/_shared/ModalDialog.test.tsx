@@ -36,34 +36,18 @@ describe('ModalDialog', () => {
 
   it('Should render dialog actions with 2 buttons', () => {
     expect(component.find('WithStyles(ForwardRef(DialogActions))').length).toBe(1);
-    expect(
-      component
-        .find('WithStyles(ForwardRef(Button))')
-        .at(0)
-        .props().children
-    ).toBe('Cancel');
+    expect(component.find('WithStyles(ForwardRef(Button))').at(0).props().children).toBe('Cancel');
 
-    expect(
-      component
-        .find('WithStyles(ForwardRef(Button))')
-        .at(1)
-        .props().children
-    ).toBe('OK');
+    expect(component.find('WithStyles(ForwardRef(Button))').at(1).props().children).toBe('OK');
   });
 
   it('Should handle on OK button click', () => {
-    component
-      .find('WithStyles(ForwardRef(Button))')
-      .at(1)
-      .simulate('click');
+    component.find('WithStyles(ForwardRef(Button))').at(1).simulate('click');
     expect(props.onAccept).toHaveBeenCalled();
   });
 
   it('Should handle on Cancel button click', () => {
-    component
-      .find('WithStyles(ForwardRef(Button))')
-      .at(0)
-      .simulate('click');
+    component.find('WithStyles(ForwardRef(Button))').at(0).simulate('click');
     expect(props.onDismiss).toHaveBeenCalled();
   });
 });
@@ -80,10 +64,7 @@ describe('ModalDialog with Clear Button', () => {
   });
 
   it('Should handle on Clear button click', () => {
-    component
-      .find('WithStyles(ForwardRef(Button))')
-      .at(0)
-      .simulate('click');
+    component.find('WithStyles(ForwardRef(Button))').at(0).simulate('click');
     expect(props.onClear).toHaveBeenCalled();
   });
 });
@@ -100,10 +81,7 @@ describe('ModalDialog with Today Button', () => {
   });
 
   it('Should handle on Clear button click', () => {
-    component
-      .find('WithStyles(ForwardRef(Button))')
-      .at(0)
-      .simulate('click');
+    component.find('WithStyles(ForwardRef(Button))').at(0).simulate('click');
     expect(props.onSetToday).toHaveBeenCalled();
   });
 });

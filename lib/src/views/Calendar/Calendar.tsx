@@ -117,7 +117,7 @@ export class Calendar extends React.Component<CalendarProps, CalendarState> {
           ? state.slideDirection
           : utils.isAfterDay(nextDate, lastDate)
             ? 'left'
-            : 'right'
+            : 'right',
       };
     }
 

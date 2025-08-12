@@ -137,29 +137,28 @@ export function makeMaskFromFormat(format: string, numberMaskChar: string) {
   return format.replace(/[a-z]/gi, numberMaskChar);
 }
 
-export const maskedDateFormatter = (mask: string, numberMaskChar: string, refuse: RegExp) => (
-  value: string
-) => {
-  let result = '';
-  const parsed = value.replace(refuse, '');
+export const maskedDateFormatter =
+  (mask: string, numberMaskChar: string, refuse: RegExp) => (value: string) => {
+    let result = '';
+    const parsed = value.replace(refuse, '');
 
-  if (parsed === '') {
-    return parsed;
-  }
-
-  let i = 0;
-  let n = 0;
-  while (i < mask.length) {
-    const maskChar = mask[i];
-    if (maskChar === numberMaskChar && n < parsed.length) {
-      const parsedChar = parsed[n];
-      result += parsedChar;
-      n += 1;
-    } else {
-      result += maskChar;
+    if (parsed === '') {
+      return parsed;
     }
-    i += 1;
-  }
 
-  return result;
-};
+    let i = 0;
+    let n = 0;
+    while (i < mask.length) {
+      const maskChar = mask[i];
+      if (maskChar === numberMaskChar && n < parsed.length) {
+        const parsedChar = parsed[n];
+        result += parsedChar;
+        n += 1;
+      } else {
+        result += maskChar;
+      }
+      i += 1;
+    }
+
+    return result;
+  };

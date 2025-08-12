@@ -42,17 +42,9 @@ describe('e2e - DateTimePicker', () => {
 
   it('Should change internal state on update', () => {
     component.find('input').simulate('click');
-    component
-      .find('Day button')
-      .at(3)
-      .simulate('click');
+    component.find('Day button').at(3).simulate('click');
 
-    expect(
-      component
-        .find('ToolbarButton')
-        .at(0)
-        .text()
-    ).toBe('2018');
+    expect(component.find('ToolbarButton').at(0).text()).toBe('2018');
     // expect(component.find('ToolbarButton').at(1).text()).toBe('Jan 3');
   });
 });
@@ -78,10 +70,7 @@ describe('e2e -- Controlling open state', () => {
   });
 
   it('Should close', () => {
-    component
-      .find('ForwardRef(DialogActions) button')
-      .at(0)
-      .simulate('click');
+    component.find('ForwardRef(DialogActions) button').at(0).simulate('click');
     expect(onCloseMock).toHaveBeenCalled();
   });
 });
